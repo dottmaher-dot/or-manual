@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl"><head>
+<html lang="he" dir="rtl">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hand Surgery OR Manual — ד"ר מאהר חטיב</title>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0a1628;
@@ -886,6 +887,181 @@
   }
   #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+
+  /* ===== MOBILE RESPONSIVE ===== */
+  @media screen and (max-width: 768px) {
+
+    body { background: #0a1628; }
+
+    .screen-nav {
+      flex-wrap: wrap;
+      gap: 6px;
+      padding: 8px 12px;
+      font-size: 11px;
+    }
+    .screen-nav strong { font-size: 12px; }
+    .nav-spacer { display: none; }
+    .nav-badge { font-size: 10px; }
+
+    .pages-container {
+      margin-top: 70px;
+      padding: 8px;
+      gap: 12px;
+    }
+
+    /* Override fixed A4 width */
+    .page {
+      width: 100% !important;
+      min-height: unset !important;
+      border-radius: 10px;
+      margin: 0;
+    }
+
+    /* Section header stacks */
+    .section-header {
+      min-height: unset;
+    }
+    .section-letter-block {
+      width: 60px;
+    }
+    .section-letter-big { font-size: 26px; }
+    .section-title-text { font-size: 16px !important; }
+    .section-eyebrow { font-size: 9px !important; }
+    .section-body { padding: 14px 14px 40px; }
+
+    /* Cover page */
+    .cover-body {
+      padding: 24px 20px;
+    }
+    .cover-title { font-size: 28px; }
+    .cover-subtitle { font-size: 15px; }
+    .cover-sections-row { flex-wrap: wrap; }
+    .cover-section-chip { font-size: 9px; padding: 8px 4px; }
+
+    /* TOC */
+    .toc-header { padding: 20px 16px 16px; }
+    .toc-title { font-size: 20px; }
+    .toc-body { padding: 16px; }
+    .toc-chapter-name { font-size: 12px; }
+    .toc-letter { width: 26px; height: 26px; font-size: 11px; }
+
+    /* Two column → single column */
+    .two-col,
+    .three-col,
+    .arthro-checklist,
+    .pref-card-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Set cards */
+    .set-card-name { font-size: 13px; }
+    .set-instruments-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Preference cards */
+    .pref-card-header { padding: 8px 12px; }
+    .pref-card-title { font-size: 12px; }
+    .pref-card-body { padding: 10px 12px; }
+
+    /* Screw tables — horizontal scroll */
+    .screw-table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    table.screw-table {
+      min-width: 480px;
+      font-size: 10.5px;
+    }
+    table.screw-table th { font-size: 9px; padding: 5px 8px; }
+    table.screw-table td { padding: 5px 8px; font-size: 10.5px; }
+
+    /* General tables */
+    .set-card-body table {
+      min-width: 320px;
+      font-size: 10px;
+    }
+    div[style*="overflow-x"] { overflow-x: auto; }
+
+    /* Make all inner tables scrollable */
+    .page .set-card-body,
+    .page .section-body {
+      overflow-x: auto;
+    }
+
+    /* Checklist */
+    .check-item { font-size: 11.5px; }
+    .check-tag { font-size: 9px; }
+
+    /* Model grid */
+    .model-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Workflow */
+    .workflow-row {
+      flex-direction: column;
+      gap: 4px;
+    }
+    .workflow-step::after { display: none; }
+    .workflow-step { padding: 8px; }
+
+    /* Info boxes */
+    .info-box { font-size: 11px; }
+
+    /* Footer */
+    .page-footer {
+      position: relative;
+      height: auto;
+      padding: 6px 14px;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .footer-text { font-size: 9px; }
+
+    /* Edit toolbar mobile */
+    #edit-toolbar {
+      bottom: 10px;
+      padding: 6px 12px;
+      gap: 6px;
+      border-radius: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: calc(100vw - 20px);
+    }
+    #edit-toolbar .tb-btn {
+      padding: 4px 10px;
+      font-size: 10px;
+    }
+    #edit-toolbar .tb-label { font-size: 10px; }
+
+    /* Screw badges */
+    .size-badge { font-size: 9px; padding: 1px 5px; }
+    .use-tag { font-size: 9px; padding: 1px 5px; }
+
+    /* Cover logo */
+    .cover-logo-placeholder { width: 52px; height: 52px; font-size: 10px; }
+  }
+
+  /* ZFold inner screen (~370px) */
+  @media screen and (max-width: 400px) {
+    .cover-title { font-size: 22px; }
+    .section-title-text { font-size: 14px !important; }
+    .set-instruments-grid { grid-template-columns: 1fr !important; }
+    .model-grid { grid-template-columns: 1fr !important; }
+    .screen-nav .nav-pill { font-size: 10px; padding: 3px 8px; }
+  }
+
+  /* Print — restore A4 */
+  @media print {
+    .screen-nav, #edit-toolbar { display: none !important; }
+    .pages-container { margin-top: 0; padding: 0; }
+    .page { width: 210mm !important; min-height: 297mm !important; box-shadow: none; border-radius: 0; }
+    .page-footer { position: absolute; }
+    .screw-table-wrapper { overflow-x: visible; }
+    table.screw-table { min-width: unset; }
+  }
+
 </style>
 </head>
 <body>
@@ -915,18 +1091,19 @@
     <div class="cover-logo-placeholder">
       LOGO<br>יתווסף
     </div>
-    <div class="cover-tag dark-editable" contenteditable="true">Hand Surgery — OR Manual</div>
-    <div class="cover-title" contenteditable="true">חוברת חדר<br>הניתוח</div>
-    <div class="cover-subtitle" contenteditable="true">כירורגיית כף יד ואורתופדיה</div>
+    <div class="cover-tag">Hand Surgery — OR Manual</div>
+    <div class="cover-title">חוברת חדר<br>הניתוח</div>
+    <div class="cover-subtitle">כירורגיית כף יד ואורתופדיה</div>
     <div class="cover-divider"></div>
-    <div class="cover-meta" contenteditable="true">
+    <div class="cover-meta">
       <strong>ד"ר מאהר חטיב</strong><br>
       כירורג כף יד, מרפק ומיקרוכירורגיה<br>
-      <strong>מחלקה:</strong>&nbsp; אורתופדיה "א"<br>
-      <strong>ג</strong><strong>תאריך:</strong> מאי 2026
+      <strong>מחלקה:</strong> ______________________<br>
+      <strong>גרסה:</strong> v0.1 — טיוטת עבודה<br>
+      <strong>תאריך:</strong> מאי 2026
     </div>
   </div>
-  <div class="cover-version-badge dark-editable" contenteditable="true">DRAFT — לפני גרסה סופית</div>
+  <div class="cover-version-badge">DRAFT — לפני גרסה סופית</div>
   <div class="cover-sections-row">
     
     <div class="cover-section-chip">B — ציוד בסיס</div>
@@ -942,42 +1119,42 @@
 <div class="page-label">תוכן עניינים</div>
 <div class="page page-toc" id="toc">
   <div class="toc-header">
-    <div class="toc-section-label dark-editable" contenteditable="true">Table of Contents</div>
-    <div class="toc-title dark-editable" contenteditable="true">תוכן עניינים</div>
+    <div class="toc-section-label">Table of Contents</div>
+    <div class="toc-title">תוכן עניינים</div>
   </div>
   <div class="toc-body">
 
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">B</div>
-        <div class="toc-chapter-name" contenteditable="true">ציוד בסיס קבוע לכל ניתוחי כף יד</div>
+        <div class="toc-chapter-name">ציוד בסיס קבוע לכל ניתוחי כף יד</div>
         <div class="toc-page-num">4</div>
       </div>
       <div class="toc-sub">
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>ציוד סטרילי בסיסי</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>ציוד חבישה</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>Mini C-Arm</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>ציוד סטרילי בסיסי</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>ציוד חבישה</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>Mini C-Arm</div>
       </div>
     </div>
 
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">C</div>
-        <div class="toc-chapter-name" contenteditable="true">סטים מחלקתיים</div>
+        <div class="toc-chapter-name">סטים מחלקתיים</div>
         <div class="toc-page-num">5</div>
       </div>
       <div class="toc-sub">
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>סט כף יד בסיס (CORE)</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>תוספת ד"ר מאהר&nbsp;</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>סט מקומית&nbsp;<div><br></div><div>אקסיזיה</div></div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>סט מיקרוכירורגיה</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>סט כף יד בסיס (CORE)</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>תוספת ד"ר מאהר (ADD-ON)</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>סט מקומית / אקסיזיה</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>סט מיקרוכירורגיה</div>
       </div>
     </div>
 
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">D</div>
-        <div class="toc-chapter-name" contenteditable="true">ארתרוסקופיה — Wrist Arthroscopy Setup</div>
+        <div class="toc-chapter-name">ארתרוסקופיה — Wrist Arthroscopy Setup</div>
         <div class="toc-page-num">9</div>
       </div>
     </div>
@@ -985,7 +1162,7 @@
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">E</div>
-        <div class="toc-chapter-name" contenteditable="true">מערכות שתלים — ACUMED / STRYKER</div>
+        <div class="toc-chapter-name">מערכות שתלים — ACUMED / STRYKER</div>
         <div class="toc-page-num">10</div>
       </div>
     </div>
@@ -993,45 +1170,45 @@
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">F</div>
-        <div class="toc-chapter-name" contenteditable="true">טבלאות ברגים מחלקתיות</div>
+        <div class="toc-chapter-name">טבלאות ברגים מחלקתיות</div>
         <div class="toc-page-num">11</div>
       </div>
       <div class="toc-sub">
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>ACUTRAK — Acumed</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>STRYKER FIXOS</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>STRYKER VariAx / Mini Fragment</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>ACUTRAK — Acumed</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>STRYKER FIXOS</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>STRYKER VariAx / Mini Fragment</div>
       </div>
     </div>
 
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">G</div>
-        <div class="toc-chapter-name" contenteditable="true">Preference Cards — רשימת ניתוחים</div>
+        <div class="toc-chapter-name">Preference Cards — רשימת ניתוחים</div>
         <div class="toc-page-num">13</div>
       </div>
       <div class="toc-sub">
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>שחרור תעלה קרפלית (CTS)</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>שחרור אצבע הדק</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>ORIF רדיוס דיסטלי</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>ORIF + ארתרוסקופיה</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>4 Corner Fusion</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>תפירת עצב / גיד מכופף / גיד מיישר</div>
-        <div class="toc-sub-item" contenteditable="true"><div class="toc-dot"></div>קיבוע שבר סקאפויד / חוסר חיבור</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>שחרור תעלה קרפלית (CTS)</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>שחרור אצבע הדק</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>ORIF רדיוס דיסטלי</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>ORIF + ארתרוסקופיה</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>4 Corner Fusion</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>תפירת עצב / גיד מכופף / גיד מיישר</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>קיבוע שבר סקאפויד / חוסר חיבור</div>
       </div>
     </div>
 
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">H</div>
-        <div class="toc-chapter-name" contenteditable="true">מודל תפעולי — OR Workflow &amp; Logistics</div>
+        <div class="toc-chapter-name">מודל תפעולי — OR Workflow & Logistics</div>
         <div class="toc-page-num">23</div>
       </div>
     </div>
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">גרסת עבודה v0.1</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">גרסת עבודה v0.1</span>
   </div>
 </div>
 
@@ -1040,17 +1217,17 @@
 <div class="page page-section" id="secB">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">B</div>
+      <div class="section-letter-big">B</div>
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Basic Equipment — Standard for All Hand Cases</div>
-      <div class="section-title-text" contenteditable="true">ציוד בסיס קבוע לכל ניתוחי כף יד</div>
+      <div class="section-eyebrow">Basic Equipment — Standard for All Hand Cases</div>
+      <div class="section-title-text">ציוד בסיס קבוע לכל ניתוחי כף יד</div>
     </div>
   </div>
   <div class="section-body">
 
-    <div class="info-box blue" contenteditable="true">
+    <div class="info-box blue">
       ציוד זה מוכן <strong>בכל ניתוח</strong> ללא יוצא מן הכלל. הוא אינו תלוי בסוג הניתוח ואינו צריך להיות מצוין ב-Preference Card.
     </div>
 
@@ -1062,32 +1239,14 @@
           <div class="section-divider-line"></div>
         </div>
         <div class="checklist-block">
-          <div class="checklist-header dark-editable" contenteditable="true"><span class="icon">🔷</span> Sterile Field Essentials</div>
+          <div class="checklist-header"><span class="icon">🔷</span> Sterile Field Essentials</div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">כיסוי ארתרוסקופיה + תוספת יסוד גדול</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">עט סימון</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">גרב 15</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">סכין 15</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">Bipolar — Standby בכל ניתוח</div><span class="check-tag w">Standby</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">כיסוי שאבנתית לרחיצת יד</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">כיסוי ארתרוסקופיה + תוספת יסוד גדול</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">עט סימון</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">גרב 15</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">סכין 15</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">Bipolar — Standby בכל ניתוח</div><span class="check-tag w">Standby</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">כיסוי שאבנתית לרחיצת יד</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
@@ -1099,32 +1258,14 @@
           <div class="section-divider-line"></div>
         </div>
         <div class="checklist-block">
-          <div class="checklist-header dark-editable" contenteditable="true"><span class="icon">🟩</span> Dressing Pack</div>
+          <div class="checklist-header"><span class="icon">🟩</span> Dressing Pack</div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">גזה ויזלין</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">משחת בקטרובאן / סינטומיצין</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">חבישת קודנום — 3 גדלים</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">פד גזה סטרילי</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">ווילבנד קטן</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">אגד אלסטי קטן / קירליקס</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">גזה ויזלין</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">משחת בקטרובאן / סינטומיצין</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">חבישת קודנום — 3 גדלים</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">פד גזה סטרילי</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">ווילבנד קטן</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">אגד אלסטי קטן / קירליקס</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
@@ -1136,26 +1277,20 @@
       <div class="section-divider-line"></div>
     </div>
     <div class="checklist-block">
-      <div class="checklist-header dark-editable" contenteditable="true"><span class="icon">🔬</span> Mini C-Arm — Standby Setup</div>
+      <div class="checklist-header"><span class="icon">🔬</span> Mini C-Arm — Standby Setup</div>
       <div class="checklist-body" style="display:grid; grid-template-columns:1fr 1fr; gap:0 20px;">
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">כיסוי ניילון ייעודי</div><span class="check-tag w">Standby</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">גרב 20 ס"מ × 2</div><span class="check-tag w">Standby</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">כיסוי ניילון ייעודי</div><span class="check-tag w">Standby</span></div>
+        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">גרב 20 ס"מ × 2</div><span class="check-tag w">Standby</span></div>
       </div>
     </div>
 
-    <div class="info-box warn" style="margin-top:14px;" contenteditable="true">
+    <div class="info-box warn" style="margin-top:14px;">
       <strong>⚠ חשוב:</strong> Mini C-Arm מופעל רק בניתוחים המצוינים ב-Preference Card. הכנה מוקדמת — לפני הכנסת המטופל לחדר.
     </div>
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section B <span class="footer-dot">●</span> 4</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section B <span class="footer-dot">●</span> 4</span>
   </div>
 </div>
 
@@ -1165,17 +1300,17 @@
 <div class="page page-section" id="secC">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">C</div>
+      <div class="section-letter-big">C</div>
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Instrument Sets — Department Catalog</div>
-      <div class="section-title-text" contenteditable="true">סטים מחלקתיים</div>
+      <div class="section-eyebrow">Instrument Sets — Department Catalog</div>
+      <div class="section-title-text">סטים מחלקתיים</div>
     </div>
   </div>
   <div class="section-body">
 
-    <div class="info-box blue" style="font-size:11.5px;margin-bottom:18px;" contenteditable="true">
+    <div class="info-box blue" style="font-size:11.5px;margin-bottom:18px;">
       תכולת כלים מלאה עם מק"טים וכמויות — ראה <strong>נספח A</strong> בסוף הקטלוג.
     </div>
 
@@ -1223,7 +1358,7 @@
       <div style="background:#0e3d36;padding:12px 18px;display:flex;align-items:center;gap:12px;">
         <div style="background:var(--teal);color:white;font-size:9.5px;font-weight:800;padding:3px 10px;border-radius:12px;letter-spacing:0.1em;">LOCAL</div>
         <div style="font-size:16px;font-weight:800;color:white;flex:1;">סט כף יד מקומית</div>
-        <div style="font-size:10px;color:rgba(255,255,255,0.4);">WALANT &amp; Day Surgery — סטים 1–3</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);">WALANT & Day Surgery — סטים 1–3</div>
       </div>
       <div style="padding:16px 18px;background:white;">
         <div style="background:#f0fdfa;border-right:4px solid var(--teal);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:14px;font-size:12px;line-height:1.8;">
@@ -1324,8 +1459,8 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section C — סטים <span class="footer-dot">●</span> 5</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section C — סטים <span class="footer-dot">●</span> 5</span>
   </div>
 </div>
 
@@ -1334,17 +1469,17 @@
 <div class="page page-section" id="secConsumables">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">E</div>
+      <div class="section-letter-big">E</div>
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Hand Surgery Specific Supplies — מיקום ואחסון</div>
-      <div class="section-title-text" contenteditable="true">ציוד נלווה ייחודי לכירורגיית כף יד</div>
+      <div class="section-eyebrow">Hand Surgery Specific Supplies — מיקום ואחסון</div>
+      <div class="section-title-text">ציוד נלווה ייחודי לכירורגיית כף יד</div>
     </div>
   </div>
   <div class="section-body">
 
-    <div class="info-box blue" style="font-size:11.5px; margin-bottom:20px;" contenteditable="true">
+    <div class="info-box blue" style="font-size:11.5px; margin-bottom:20px;">
       ציוד זה <strong>ייחודי לכירורגיית כף יד</strong> ואינו נמצא בערכות חדר ניתוח כלליות. יש לוודא זמינות לפני כל ניתוח רלוונטי. עמודת המיקום מיועדת למילוי ידני.
     </div>
 
@@ -1364,8 +1499,8 @@
         </thead>
         <tbody>
           <tr>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;" contenteditable="true">Finger Splint</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">Finger Splint</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
               <div style="display:flex;gap:5px;flex-wrap:wrap;">
                 <span style="background:#dbeafe;color:#1e40af;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">S</span>
                 <span style="background:#dbeafe;color:#1e40af;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">M</span>
@@ -1373,55 +1508,55 @@
                 <span style="background:#dbeafe;color:#1e40af;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">XL</span>
               </div>
             </td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
               <div style="height:18px;"></div>
             </td>
           </tr>
           <tr style="background:#f8fafc;">
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;" contenteditable="true">חבישת קונדום</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);" contenteditable="true">גדלים שונים</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">חבישת קונדום</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">גדלים שונים</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
               <div style="height:18px;"></div>
             </td>
           </tr>
           <tr>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;" contenteditable="true">Nerve Tube</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);" contenteditable="true">גדלים שונים</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">Nerve Tube</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">גדלים שונים</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
               <div style="height:18px;"></div>
             </td>
           </tr>
           <tr style="background:#f8fafc;">
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;" contenteditable="true">חוטים Nylon</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">חוטים Nylon</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
               <div style="display:flex;gap:5px;flex-wrap:wrap;">
                 <span style="background:#f3e8ff;color:#6b21a8;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">8-0</span>
                 <span style="background:#f3e8ff;color:#6b21a8;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">9-0</span>
                 <span style="background:#f3e8ff;color:#6b21a8;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">10-0</span>
               </div>
             </td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
               <div style="height:18px;"></div>
             </td>
           </tr>
           <tr>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;" contenteditable="true">אצבעות סיניות<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Finger Traps</span></td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);" contenteditable="true">גדלים שונים</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">אצבעות סיניות<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Finger Traps</span></td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">גדלים שונים</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
               <div style="height:18px;"></div>
             </td>
           </tr>
           <tr style="background:#f8fafc;">
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;" contenteditable="true">כלי חיתוך עצב<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Nerve Cutting Instruments</span></td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);" contenteditable="true">קיימים 4 מידות</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">כלי חיתוך עצב<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Nerve Cutting Instruments</span></td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">קיימים 4 מידות</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
               <div style="height:18px;"></div>
             </td>
           </tr>
           <tr>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;" contenteditable="true">סכין ייעודי לחיתוך עצב<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Nerve Knife</span></td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);" contenteditable="true">—</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;" contenteditable="true">
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">סכין ייעודי לחיתוך עצב<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Nerve Knife</span></td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">—</td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
               <div style="height:18px;"></div>
             </td>
           </tr>
@@ -1430,14 +1565,14 @@
     </div>
 
     <!-- NOTE BOX -->
-    <div class="info-box warn" style="font-size:11.5px;" contenteditable="true">
+    <div class="info-box warn" style="font-size:11.5px;">
       <strong>⚠ תזכורת:</strong> כלי חיתוך עצב וסכין ייעודי — מיקום בסט טרם הוחלט. יש לעדכן לאחר קבלת החלטה.
     </div>
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section E — ציוד נלווה</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section E — ציוד נלווה</span>
   </div>
 </div>
 
@@ -1446,17 +1581,17 @@
 <div class="page page-section" id="secD">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">D</div>
+      <div class="section-letter-big">D</div>
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Wrist Arthroscopy — Setup Protocol</div>
-      <div class="section-title-text" contenteditable="true">ארתרוסקופיה — שורש כף יד</div>
+      <div class="section-eyebrow">Wrist Arthroscopy — Setup Protocol</div>
+      <div class="section-title-text">ארתרוסקופיה — שורש כף יד</div>
     </div>
   </div>
   <div class="section-body">
 
-    <div class="info-box blue" contenteditable="true">
+    <div class="info-box blue">
       <strong>חובה Checklist לפני הרדמה.</strong> לוודא תאימות: optics + camera + light source. לוודא finger traps לפני כניסת מנתח לחדר.
     </div>
 
@@ -1469,51 +1604,24 @@
     <div class="two-col" style="margin-bottom:16px;">
       <div>
         <div class="checklist-block">
-          <div class="checklist-header dark-editable" style="background:#0a2a5c;" contenteditable="true"><span class="icon">📦</span> Tower Setup</div>
+          <div class="checklist-header" style="background:#0a2a5c;"><span class="icon">📦</span> Tower Setup</div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">קופסה מגדל 1</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">קופסה מגדל 2</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">קופסת כלים ארתרוסקופיה</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">קופסת אופטיקה — שורש כף יד</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסה מגדל 1</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסה מגדל 2</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסת כלים ארתרוסקופיה</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסת אופטיקה — שורש כף יד</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
       <div>
         <div class="checklist-block">
-          <div class="checklist-header dark-editable" style="background:#0d3d36;" contenteditable="true"><span class="icon">🔧</span> Consumables / מתכלים</div>
+          <div class="checklist-header" style="background:#0d3d36;"><span class="icon">🔧</span> Consumables / מתכלים</div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">Shaver 2.1</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">אצבעות סיניות צבעוניות</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">ספוג כחול סטרילי</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">חגורות שחורות</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">סקשן</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">Shaver 2.1</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">אצבעות סיניות צבעוניות</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">ספוג כחול סטרילי</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">חגורות שחורות</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">סקשן</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
@@ -1526,39 +1634,21 @@
     </div>
 
     <div class="checklist-block">
-      <div class="checklist-header dark-editable" style="background:#6b2800;" contenteditable="true"><span class="icon">✅</span> Pre-Anesthesia Verification</div>
+      <div class="checklist-header" style="background:#6b2800;"><span class="icon">✅</span> Pre-Anesthesia Verification</div>
       <div class="checklist-body" style="display:grid; grid-template-columns:1fr 1fr; gap:0 16px;">
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label" contenteditable="true">Camera + Light source — חיבור ובדיקה</div><span class="check-tag w">וריפיקציה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label" contenteditable="true">Optics — תאימות עם camera confirmed</div><span class="check-tag w">וריפיקציה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label" contenteditable="true">Finger traps — זמינות + גדלים</div><span class="check-tag w">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label" contenteditable="true">Shaver — חיבור למגדל ובדיקת סיבוב</div><span class="check-tag w">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">Inflow / Outflow — חיבור מים</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label" contenteditable="true">מיקום מגדל — תוכנן מראש</div><span class="check-tag m">חובה</span><div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'check')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Camera + Light source — חיבור ובדיקה</div><span class="check-tag w">וריפיקציה</span></div>
+        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Optics — תאימות עם camera confirmed</div><span class="check-tag w">וריפיקציה</span></div>
+        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Finger traps — זמינות + גדלים</div><span class="check-tag w">חובה</span></div>
+        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Shaver — חיבור למגדל ובדיקת סיבוב</div><span class="check-tag w">חובה</span></div>
+        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">Inflow / Outflow — חיבור מים</div><span class="check-tag m">חובה</span></div>
+        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">מיקום מגדל — תוכנן מראש</div><span class="check-tag m">חובה</span></div>
       </div>
     </div>
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section D <span class="footer-dot">●</span> 9</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section D <span class="footer-dot">●</span> 9</span>
   </div>
 </div>
 
@@ -1567,19 +1657,19 @@
 <div class="page page-section" id="secF">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">F</div>
+      <div class="section-letter-big">F</div>
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Screw Reference Tables — Department Standard</div>
-      <div class="section-title-text" contenteditable="true">טבלאות ברגים מחלקתיות</div>
+      <div class="section-eyebrow">Screw Reference Tables — Department Standard</div>
+      <div class="section-title-text">טבלאות ברגים מחלקתיות</div>
     </div>
   </div>
   <div class="section-body">
 
     <!-- HEADLESS COMPRESSION — GENERAL -->
     <div class="screw-table-wrapper">
-      <div class="screw-brand-header dark-editable" style="background:#1a2a4a;" contenteditable="true">
+      <div class="screw-brand-header" style="background:#1a2a4a;">
         <span class="screw-brand-tag" style="background:#2e7dd1;">HEADLESS COMPRESSION</span>
         מדריך מחלקתי — ברגים Headless כלליים
       </div>
@@ -1597,49 +1687,49 @@
         </thead>
         <tbody>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">1.7</span></td>
-            <td contenteditable="true">Headless</td>
-            <td style="text-align:center;" contenteditable="true">0.6</td>
-            <td style="text-align:center;" contenteditable="true">1.7 / ללא קידוח</td>
-            <td style="text-align:center;" contenteditable="true">8–20</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פלנגות קטנות</span> <span class="use-tag" contenteditable="true">Avulsion</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;" contenteditable="true">עדין מאוד</td>
+            <td><span class="size-badge">1.7</span></td>
+            <td>Headless</td>
+            <td style="text-align:center;">0.6</td>
+            <td style="text-align:center;">1.7 / ללא קידוח</td>
+            <td style="text-align:center;">8–20</td>
+            <td><span class="use-tag">פלנגות קטנות</span> <span class="use-tag">Avulsion</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">עדין מאוד</td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">2.2</span></td>
-            <td contenteditable="true">Short / Long thread</td>
-            <td style="text-align:center;" contenteditable="true">0.8</td>
-            <td style="text-align:center;" contenteditable="true">2.0</td>
-            <td style="text-align:center;" contenteditable="true">10–40</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">סקפואיד קטן</span> <span class="use-tag" contenteditable="true">DIP/IP fusion</span> <span class="use-tag" contenteditable="true">מטקרפלים</span></td>
-            <td style="font-size:10.5px;color:#0e8a7a;font-weight:700;" contenteditable="true">אחד הגדלים הכי שימושיים ביד</td>
+            <td><span class="size-badge">2.2</span></td>
+            <td>Short / Long thread</td>
+            <td style="text-align:center;">0.8</td>
+            <td style="text-align:center;">2.0</td>
+            <td style="text-align:center;">10–40</td>
+            <td><span class="use-tag">סקפואיד קטן</span> <span class="use-tag">DIP/IP fusion</span> <span class="use-tag">מטקרפלים</span></td>
+            <td style="font-size:10.5px;color:#0e8a7a;font-weight:700;">אחד הגדלים הכי שימושיים ביד</td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">3.0</span></td>
-            <td contenteditable="true">Short / Long / Fully threaded</td>
-            <td style="text-align:center;" contenteditable="true">1.1</td>
-            <td style="text-align:center;" contenteditable="true">2.5</td>
-            <td style="text-align:center;" contenteditable="true">12–50</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">סקפואיד</span> <span class="use-tag" contenteditable="true">מטקרפלים</span> <span class="use-tag" contenteditable="true">Radial styloid</span></td>
-            <td style="font-size:10.5px;color:#c9a227;font-weight:700;" contenteditable="true">⭐ Workhorse</td>
+            <td><span class="size-badge">3.0</span></td>
+            <td>Short / Long / Fully threaded</td>
+            <td style="text-align:center;">1.1</td>
+            <td style="text-align:center;">2.5</td>
+            <td style="text-align:center;">12–50</td>
+            <td><span class="use-tag">סקפואיד</span> <span class="use-tag">מטקרפלים</span> <span class="use-tag">Radial styloid</span></td>
+            <td style="font-size:10.5px;color:#c9a227;font-weight:700;">⭐ Workhorse</td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">4.0</span></td>
-            <td contenteditable="true">Headless / Headed</td>
-            <td style="text-align:center;" contenteditable="true">1.4</td>
-            <td style="text-align:center;" contenteditable="true">3.2</td>
-            <td style="text-align:center;" contenteditable="true">20–60</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">STT</span> <span class="use-tag" contenteditable="true">4CF</span> <span class="use-tag" contenteditable="true">Arthrodesis</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;" contenteditable="true">קומפרסיה חזקה</td>
+            <td><span class="size-badge">4.0</span></td>
+            <td>Headless / Headed</td>
+            <td style="text-align:center;">1.4</td>
+            <td style="text-align:center;">3.2</td>
+            <td style="text-align:center;">20–60</td>
+            <td><span class="use-tag">STT</span> <span class="use-tag">4CF</span> <span class="use-tag">Arthrodesis</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">קומפרסיה חזקה</td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">5.0</span></td>
-            <td contenteditable="true">Headless / Headed</td>
-            <td style="text-align:center;" contenteditable="true">1.6–2.0</td>
-            <td style="text-align:center;" contenteditable="true">4.0</td>
-            <td style="text-align:center;" contenteditable="true">30–80</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פיוז'נים גדולים</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;" contenteditable="true">פחות שימושי ביד רגילה</td>
+            <td><span class="size-badge">5.0</span></td>
+            <td>Headless / Headed</td>
+            <td style="text-align:center;">1.6–2.0</td>
+            <td style="text-align:center;">4.0</td>
+            <td style="text-align:center;">30–80</td>
+            <td><span class="use-tag">פיוז'נים גדולים</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">פחות שימושי ביד רגילה</td>
           </tr>
         </tbody>
       </table>
@@ -1647,7 +1737,7 @@
 
     <!-- ACUTRAK -->
     <div class="screw-table-wrapper">
-      <div class="screw-brand-header dark-editable" contenteditable="true">
+      <div class="screw-brand-header">
         <span class="screw-brand-tag">ACUMED</span>
         ACUTRAK — Headless Compression Screws
       </div>
@@ -1662,34 +1752,34 @@
         </thead>
         <tbody>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Micro</span></td>
-            <td contenteditable="true">2.5–2.8</td>
-            <td contenteditable="true">8–30 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פלנגות</span> <span class="use-tag" contenteditable="true">Proximal pole</span></td>
+            <td><span class="size-badge">Micro</span></td>
+            <td>2.5–2.8</td>
+            <td>8–30 מ"מ</td>
+            <td><span class="use-tag">פלנגות</span> <span class="use-tag">Proximal pole</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Mini</span></td>
-            <td contenteditable="true">3.5–3.6</td>
-            <td contenteditable="true">16–30 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">סקפואיד קטן</span></td>
+            <td><span class="size-badge">Mini</span></td>
+            <td>3.5–3.6</td>
+            <td>16–30 מ"מ</td>
+            <td><span class="use-tag">סקפואיד קטן</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Standard</span></td>
-            <td contenteditable="true">4.0–4.1</td>
-            <td contenteditable="true">16–34 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">סקפואיד Waist</span></td>
+            <td><span class="size-badge">Standard</span></td>
+            <td>4.0–4.1</td>
+            <td>16–34 מ"מ</td>
+            <td><span class="use-tag">סקפואיד Waist</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">4.7</span></td>
-            <td contenteditable="true">4.5–4.7</td>
-            <td contenteditable="true">20–50 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פיוז'נים</span></td>
+            <td><span class="size-badge">4.7</span></td>
+            <td>4.5–4.7</td>
+            <td>20–50 מ"מ</td>
+            <td><span class="use-tag">פיוז'נים</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">5.5</span></td>
-            <td contenteditable="true">5.2–5.5</td>
-            <td contenteditable="true">25–60 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">Salvage</span></td>
+            <td><span class="size-badge">5.5</span></td>
+            <td>5.2–5.5</td>
+            <td>25–60 מ"מ</td>
+            <td><span class="use-tag">Salvage</span></td>
           </tr>
         </tbody>
       </table>
@@ -1697,7 +1787,7 @@
 
     <!-- STRYKER FIXOS -->
     <div class="screw-table-wrapper">
-      <div class="screw-brand-header dark-editable" style="background:#1a3d1a;" contenteditable="true">
+      <div class="screw-brand-header" style="background:#1a3d1a;">
         <span class="screw-brand-tag" style="background:#2e7d32;">STRYKER</span>
         FIXOS — Headless Dual Pitch Compression Screws
       </div>
@@ -1712,28 +1802,28 @@
         </thead>
         <tbody>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Fixos 2.3</span></td>
-            <td contenteditable="true">2.3</td>
-            <td contenteditable="true">10–26 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פלנגות</span></td>
+            <td><span class="size-badge">Fixos 2.3</span></td>
+            <td>2.3</td>
+            <td>10–26 מ"מ</td>
+            <td><span class="use-tag">פלנגות</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Fixos 3.0</span></td>
-            <td contenteditable="true">3.0</td>
-            <td contenteditable="true">12–34 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">מטקרפלים</span></td>
+            <td><span class="size-badge">Fixos 3.0</span></td>
+            <td>3.0</td>
+            <td>12–34 מ"מ</td>
+            <td><span class="use-tag">מטקרפלים</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Fixos 4.0</span></td>
-            <td contenteditable="true">4.0</td>
-            <td contenteditable="true">18–40 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">סקפואיד</span></td>
+            <td><span class="size-badge">Fixos 4.0</span></td>
+            <td>4.0</td>
+            <td>18–40 מ"מ</td>
+            <td><span class="use-tag">סקפואיד</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Fixos 5.0</span></td>
-            <td contenteditable="true">5.0</td>
-            <td contenteditable="true">24–60 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פיוז'נים</span></td>
+            <td><span class="size-badge">Fixos 5.0</span></td>
+            <td>5.0</td>
+            <td>24–60 מ"מ</td>
+            <td><span class="use-tag">פיוז'נים</span></td>
           </tr>
         </tbody>
       </table>
@@ -1741,9 +1831,9 @@
 
     <!-- STRYKER VARIAX -->
     <div class="screw-table-wrapper">
-      <div class="screw-brand-header dark-editable" style="background:#2d1a3d;" contenteditable="true">
+      <div class="screw-brand-header" style="background:#2d1a3d;">
         <span class="screw-brand-tag" style="background:#7b2d8b;">STRYKER</span>
-        VariAx / Mini Fragment — Locking &amp; Cortical Screws
+        VariAx / Mini Fragment — Locking & Cortical Screws
       </div>
       <table class="screw-table">
         <thead>
@@ -1756,34 +1846,34 @@
         </thead>
         <tbody>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Mini Frag 2.0</span></td>
-            <td contenteditable="true">2.0</td>
-            <td contenteditable="true">8–38 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פלנגות</span></td>
+            <td><span class="size-badge">Mini Frag 2.0</span></td>
+            <td>2.0</td>
+            <td>8–38 מ"מ</td>
+            <td><span class="use-tag">פלנגות</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Mini Frag 2.4</span></td>
-            <td contenteditable="true">2.4</td>
-            <td contenteditable="true">8–38 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">מטקרפלים</span></td>
+            <td><span class="size-badge">Mini Frag 2.4</span></td>
+            <td>2.4</td>
+            <td>8–38 מ"מ</td>
+            <td><span class="use-tag">מטקרפלים</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">VariAx Wrist</span></td>
-            <td contenteditable="true">2.7</td>
-            <td contenteditable="true">8–50 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">Distal Radius</span></td>
+            <td><span class="size-badge">VariAx Wrist</span></td>
+            <td>2.7</td>
+            <td>8–50 מ"מ</td>
+            <td><span class="use-tag">Distal Radius</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">VariAx PT</span></td>
-            <td contenteditable="true">2.7</td>
-            <td contenteditable="true">16–26 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">Lag screw</span></td>
+            <td><span class="size-badge">VariAx PT</span></td>
+            <td>2.7</td>
+            <td>16–26 מ"מ</td>
+            <td><span class="use-tag">Lag screw</span></td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">Compression 3.5</span></td>
-            <td contenteditable="true">3.5</td>
-            <td contenteditable="true">8–70 מ"מ</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">אמה</span> <span class="use-tag" contenteditable="true">מרפק</span></td>
+            <td><span class="size-badge">Compression 3.5</span></td>
+            <td>3.5</td>
+            <td>8–70 מ"מ</td>
+            <td><span class="use-tag">אמה</span> <span class="use-tag">מרפק</span></td>
           </tr>
         </tbody>
       </table>
@@ -1792,7 +1882,7 @@
 
     <!-- CCS — CANNULATED CANCELLOUS SCREWS -->
     <div class="screw-table-wrapper">
-      <div class="screw-brand-header dark-editable" style="background:#1a3a5c;" contenteditable="true">
+      <div class="screw-brand-header" style="background:#1a3a5c;">
         <span class="screw-brand-tag" style="background:#0e8a7a;">CCS</span>
         Cannulated Cancellous Screws — ברגי CCS מחלקתיים
       </div>
@@ -1810,53 +1900,53 @@
         </thead>
         <tbody>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">3.0</span></td>
-            <td contenteditable="true">Partial / Full</td>
-            <td style="text-align:center;" contenteditable="true">1.1</td>
-            <td style="text-align:center;" contenteditable="true">2.5</td>
-            <td style="text-align:center;" contenteditable="true">16–40</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">סקפואיד</span> <span class="use-tag" contenteditable="true">IP fusion</span></td>
-            <td style="font-size:10.5px;color:#0e8a7a;font-weight:700;" contenteditable="true">⭐ Workhorse ביד</td>
+            <td><span class="size-badge">3.0</span></td>
+            <td>Partial / Full</td>
+            <td style="text-align:center;">1.1</td>
+            <td style="text-align:center;">2.5</td>
+            <td style="text-align:center;">16–40</td>
+            <td><span class="use-tag">סקפואיד</span> <span class="use-tag">IP fusion</span></td>
+            <td style="font-size:10.5px;color:#0e8a7a;font-weight:700;">⭐ Workhorse ביד</td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">4.0</span></td>
-            <td contenteditable="true">Partial / Full</td>
-            <td style="text-align:center;" contenteditable="true">1.6</td>
-            <td style="text-align:center;" contenteditable="true">3.2</td>
-            <td style="text-align:center;" contenteditable="true">20–60</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">סקפואיד גדול</span> <span class="use-tag" contenteditable="true">Styloid</span> <span class="use-tag" contenteditable="true">Wrist fusion</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;" contenteditable="true">קומפרסיה טובה</td>
+            <td><span class="size-badge">4.0</span></td>
+            <td>Partial / Full</td>
+            <td style="text-align:center;">1.6</td>
+            <td style="text-align:center;">3.2</td>
+            <td style="text-align:center;">20–60</td>
+            <td><span class="use-tag">סקפואיד גדול</span> <span class="use-tag">Styloid</span> <span class="use-tag">Wrist fusion</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">קומפרסיה טובה</td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">4.5</span></td>
-            <td contenteditable="true">Partial</td>
-            <td style="text-align:center;" contenteditable="true">2.0</td>
-            <td style="text-align:center;" contenteditable="true">3.5</td>
-            <td style="text-align:center;" contenteditable="true">25–70</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">MCP fusion</span> <span class="use-tag" contenteditable="true">4CF</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;" contenteditable="true">פחות נפוץ ביד</td>
+            <td><span class="size-badge">4.5</span></td>
+            <td>Partial</td>
+            <td style="text-align:center;">2.0</td>
+            <td style="text-align:center;">3.5</td>
+            <td style="text-align:center;">25–70</td>
+            <td><span class="use-tag">MCP fusion</span> <span class="use-tag">4CF</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">פחות נפוץ ביד</td>
           </tr>
           <tr>
-            <td contenteditable="true"><span class="size-badge" contenteditable="true">6.5</span></td>
-            <td contenteditable="true">Partial</td>
-            <td style="text-align:center;" contenteditable="true">3.2</td>
-            <td style="text-align:center;" contenteditable="true">4.5</td>
-            <td style="text-align:center;" contenteditable="true">32–80</td>
-            <td contenteditable="true"><span class="use-tag" contenteditable="true">פיוז'נים גדולים</span> <span class="use-tag" contenteditable="true">Total wrist</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;" contenteditable="true">נדיר ביד רגילה</td>
+            <td><span class="size-badge">6.5</span></td>
+            <td>Partial</td>
+            <td style="text-align:center;">3.2</td>
+            <td style="text-align:center;">4.5</td>
+            <td style="text-align:center;">32–80</td>
+            <td><span class="use-tag">פיוז'נים גדולים</span> <span class="use-tag">Total wrist</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">נדיר ביד רגילה</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <div class="info-box gold" style="font-size:11.5px;" contenteditable="true">
+    <div class="info-box gold" style="font-size:11.5px;">
       <strong>⭐ כלל אצבע:</strong> בורג 3.0 הוא ה-Workhorse של כף היד — מכסה את רוב המקרים. בורג 2.2 לעבודה עדינה על פלנגות ו-DIP fusion. בורג 4.0 לפיוז'נים עם קומפרסיה.
     </div>
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section F — ברגים</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section F — ברגים</span>
   </div>
 </div>
 
@@ -1865,12 +1955,12 @@
 <div class="page page-section" id="secG">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">G</div>
+      <div class="section-letter-big">G</div>
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Surgical Preference Cards — Per Procedure</div>
-      <div class="section-title-text" contenteditable="true">&nbsp;רשימת ניתוחים שכיחים</div>
+      <div class="section-eyebrow">Surgical Preference Cards — Per Procedure</div>
+      <div class="section-title-text">כרטיסי Preference — רשימת ניתוחים</div>
     </div>
   </div>
   <div class="section-body">
@@ -1879,36 +1969,21 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">✂</div>
-        <div class="pref-card-title" contenteditable="true">שחרור תעלה קרפלית — CTS Release</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-01</div>
+        <div class="pref-card-title">שחרור תעלה קרפלית — CTS Release</div>
+        <div class="pref-card-code">G-01</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט כף יד מקומית&nbsp;<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>אקסיזיה + רטרקטור אוטומטי קטן<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Metzenbaum ארוך<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית / אקסיזיה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>רטרקטור אוטומטי קטן</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Metzenbaum ארוך</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">אופציונלי / Standby</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Bipolar — Standby<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Mini C-Arm — לא שגרתי<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">אופציונלי / Standby</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Bipolar — Standby</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm — לא שגרתי</div>
           </div>
         </div>
       </div>
@@ -1918,32 +1993,20 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🤜</div>
-        <div class="pref-card-title" contenteditable="true">שחרור אצבע הדק — Trigger Finger Release</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-02</div>
+        <div class="pref-card-title">שחרור אצבע הדק — Trigger Finger Release</div>
+        <div class="pref-card-code">G-02</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט כף יד מקומית&nbsp;<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>אקסיזיה +&nbsp; Retractor Senn&nbsp;<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>ווי Damar<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית / אקסיזיה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>ווי Senn</div>
+            <div class="pref-item"><div class="pref-bullet"></div>ווי Damar</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">אופציונלי</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>WALANT — ללא טורניקט<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">אופציונלי</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>WALANT — ללא טורניקט</div>
           </div>
         </div>
       </div>
@@ -1953,48 +2016,27 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🦴</div>
-        <div class="pref-card-title" contenteditable="true">ORIF רדיוס דיסטלי</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-03</div>
+        <div class="pref-card-title">ORIF רדיוס דיסטלי</div>
+        <div class="pref-card-code">G-03</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט בסיס<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>פלטות Acumed Or Medartis<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>מקדחים + Cutter<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Langenvac<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט בסיס</div>
+            <div class="pref-item"><div class="pref-bullet"></div>פלטות וברגים — Acu-Loc 2 / VariAx</div>
+            <div class="pref-item"><div class="pref-bullet"></div>מקדחים + Cutter</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Langenvac</div>
+            <div class="pref-item"><div class="pref-bullet"></div>רטרקטור אוטומטי</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">אופציונלי / Standby</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Mini C-Arm — ✓ שגרתי<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>K-wires Standby<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>תוספת ד"ר מאהר<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">אופציונלי / Standby</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm — ✓ שגרתי</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>K-wires Standby</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>תוספת ד"ר מאהר</div>
           </div>
         </div>
-        <div class="pref-note" contenteditable="true"><strong>הערה:</strong> לוודא מלאי פלטות לפני ניתוח&nbsp;</div>
+        <div class="pref-note"><strong>הערה:</strong> לוודא מלאי פלטות לפני ניתוח — Acu-Loc 2 vs VariAx לפי החלטת ניתוח.</div>
       </div>
     </div>
 
@@ -2002,43 +2044,25 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🔭</div>
-        <div class="pref-card-title" contenteditable="true">ORIF רדיוס דיסטלי + ארתרוסקופיה</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-04</div>
+        <div class="pref-card-title">ORIF רדיוס דיסטלי + ארתרוסקופיה</div>
+        <div class="pref-card-code">G-04</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה — ORIF</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>כל ציוד G-03<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה — ORIF</div>
+            <div class="pref-item"><div class="pref-bullet"></div>כל ציוד G-03</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה — ארתרוסקופיה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet warn"></div>מגדל 1 + 2<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet warn"></div>אופטיקה + Camera + Light<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet warn"></div>Shaver 2.1<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet warn"></div>אצבעות סיניות<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet warn"></div>ספוג כחול + חגורות שחורות + סקשן<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה — ארתרוסקופיה</div>
+            <div class="pref-item"><div class="pref-bullet warn"></div>מגדל 1 + 2</div>
+            <div class="pref-item"><div class="pref-bullet warn"></div>אופטיקה + Camera + Light</div>
+            <div class="pref-item"><div class="pref-bullet warn"></div>Shaver 2.1</div>
+            <div class="pref-item"><div class="pref-bullet warn"></div>אצבעות סיניות</div>
+            <div class="pref-item"><div class="pref-bullet warn"></div>ספוג כחול + חגורות שחורות + סקשן</div>
           </div>
         </div>
-        <div class="pref-note" contenteditable="true"><strong>⚠ Checklist ארתרוסקופיה חובה לפני הרדמה — ראה Section D</strong></div>
+        <div class="pref-note"><strong>⚠ Checklist ארתרוסקופיה חובה לפני הרדמה — ראה Section D</strong></div>
       </div>
     </div>
 
@@ -2046,52 +2070,25 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">⬛</div>
-        <div class="pref-card-title" contenteditable="true">4 Corner Fusion&nbsp; -&nbsp; החלפת מפרקים - Total Wrist Fusion</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-05</div>
+        <div class="pref-card-title">4 Corner Fusion</div>
+        <div class="pref-card-code">G-05</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט בסיס<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>פלטת CPM<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Cutter<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Gilpi כפול<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>DBM 5cc<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>מסורית<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>K-wires<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט בסיס</div>
+            <div class="pref-item"><div class="pref-bullet"></div>פלטת CPM</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Cutter</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Gilpi כפול</div>
+            <div class="pref-item"><div class="pref-bullet"></div>DBM 5cc</div>
+            <div class="pref-item"><div class="pref-bullet"></div>מסורית</div>
+            <div class="pref-item"><div class="pref-bullet"></div>K-wires</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">אופציונלי</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Mini C-Arm<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>תוספת ד"ר מאהר<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">אופציונלי</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>תוספת ד"ר מאהר</div>
           </div>
         </div>
       </div>
@@ -2099,8 +2096,8 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section G <span class="footer-dot">●</span> 13–22</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section G <span class="footer-dot">●</span> 13–22</span>
   </div>
 </div>
 
@@ -2109,12 +2106,12 @@
 <div class="page page-section">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">G</div>
+      <div class="section-letter-big">G</div>
       <div class="section-letter-sub">המשך</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Preference Cards — Nerve, Tendon &amp; Scaphoid</div>
-      <div class="section-title-text" contenteditable="true">תפירות ושברים</div>
+      <div class="section-eyebrow">Preference Cards — Nerve, Tendon & Scaphoid</div>
+      <div class="section-title-text">תפירות ושברים</div>
     </div>
   </div>
   <div class="section-body">
@@ -2123,51 +2120,27 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🔬</div>
-        <div class="pref-card-title" contenteditable="true">תפירת עצב — Nerve Repair</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-06</div>
+        <div class="pref-card-title">תפירת עצב — Nerve Repair</div>
+        <div class="pref-card-code">G-06</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט מקומית<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>תוספת ד"ר מאהר<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט מיקרו<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>מיקרוסקופ<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>חוטים 8-0 / 9-0 / 10-0<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית</div>
+            <div class="pref-item"><div class="pref-bullet"></div>תוספת ד"ר מאהר</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט מיקרו</div>
+            <div class="pref-item"><div class="pref-bullet"></div>מיקרוסקופ</div>
+            <div class="pref-item"><div class="pref-bullet"></div>חוטים 8-0 / 9-0 / 10-0</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד נוסף</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Nerve tube — לפי גודל<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>כלי חיתוך עצב<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Vessel loop<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד נוסף</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Nerve tube — לפי גודל</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>כלי חיתוך עצב</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Vessel loop</div>
           </div>
         </div>
-        <div class="pref-note" contenteditable="true"><strong>⚠ מיקרוסקופ:</strong> להזמין מראש ולוודא שהוא בחדר לפני כניסת מטופל.</div>
+        <div class="pref-note"><strong>⚠ מיקרוסקופ:</strong> להזמין מראש ולוודא שהוא בחדר לפני כניסת מטופל.</div>
       </div>
     </div>
 
@@ -2175,44 +2148,23 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🤚</div>
-        <div class="pref-card-title" contenteditable="true">תפירת גיד מכופף — Flexor Tendon Repair</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-07</div>
+        <div class="pref-card-title">תפירת גיד מכופף — Flexor Tendon Repair</div>
+        <div class="pref-card-code">G-07</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט מקומית<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>תוספת ד"ר מאהר<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Ethibond 3-0 / 4-0<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Nylon 4-0<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Prolene 5-0<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית</div>
+            <div class="pref-item"><div class="pref-bullet"></div>תוספת ד"ר מאהר</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Ethibond 3-0 / 4-0</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Nylon 4-0</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Prolene 5-0</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד נוסף</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Feeding tube — retrieval<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>סד גבס פוסט-OP<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד נוסף</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Feeding tube — retrieval</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>סד גבס פוסט-OP</div>
           </div>
         </div>
       </div>
@@ -2222,36 +2174,21 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">☝</div>
-        <div class="pref-card-title" contenteditable="true">תפירת גיד מיישר — Extensor Tendon Repair</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-08</div>
+        <div class="pref-card-title">תפירת גיד מיישר — Extensor Tendon Repair</div>
+        <div class="pref-card-code">G-08</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט מקומית או אקסיזיה<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>PDS 3-0 / 4-0<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Nylon 4-0<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>Rapid Vicryl 4*0<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית</div>
+            <div class="pref-item"><div class="pref-bullet"></div>PDS 3-0 / 4-0</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Nylon 4-0</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Rapid Vicryl</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">אופציונלי</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Finger splint<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">אופציונלי</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Finger splint</div>
           </div>
         </div>
       </div>
@@ -2261,32 +2198,20 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🩻</div>
-        <div class="pref-card-title" contenteditable="true">קיבוע שבר סקאפויד — Scaphoid ORIF</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-09</div>
+        <div class="pref-card-title">קיבוע שבר סקאפויד — Scaphoid ORIF</div>
+        <div class="pref-card-code">G-09</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט מקומית<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט ברגים חלולים — Acutrak Mini/Standard<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט ברגים חלולים — Acutrak Mini/Standard</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">אופציונלי</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Mini C-Arm — ✓ שגרתי<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>מיקרודריל<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">אופציונלי</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm — ✓ שגרתי</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>מיקרודריל</div>
           </div>
         </div>
       </div>
@@ -2296,54 +2221,33 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🦷</div>
-        <div class="pref-card-title" contenteditable="true">חוסר חיבור סקאפויד — Scaphoid Non-Union</div>
-        <div class="pref-card-code dark-editable" contenteditable="true">G-10</div>
+        <div class="pref-card-title">חוסר חיבור סקאפויד — Scaphoid Non-Union</div>
+        <div class="pref-card-code">G-10</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
-            <div class="pref-col-label" contenteditable="true">ציוד חובה</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>סט בסיס<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>ברגים חלולים — Acutrak<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>תוספת ד"ר מאהר<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>DBM / Pasta bone graft<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet"></div>מסורית<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">ציוד חובה</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט בסיס</div>
+            <div class="pref-item"><div class="pref-bullet"></div>ברגים חלולים — Acutrak</div>
+            <div class="pref-item"><div class="pref-bullet"></div>תוספת ד"ר מאהר</div>
+            <div class="pref-item"><div class="pref-bullet"></div>DBM / Pasta bone graft</div>
+            <div class="pref-item"><div class="pref-bullet"></div>מסורית</div>
           </div>
           <div>
-            <div class="pref-col-label" contenteditable="true">אופציונלי</div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Mini C-Arm<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
-            <div class="pref-item" contenteditable="true"><div class="pref-bullet opt"></div>Volar wedge graft<div class="row-actions">
-    <button class="row-btn add" onclick="addRowAfter(this,'pref')" title="הוסף">+</button>
-    <button class="row-btn del" onclick="deleteRow(this)" title="מחק">×</button>
-  </div></div>
+            <div class="pref-col-label">אופציונלי</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Volar wedge graft</div>
           </div>
         </div>
-        <div class="pref-note" contenteditable="true"><strong>הערה:</strong> לוודא זמינות DBM / Pasta לפני ניתוח.</div>
+        <div class="pref-note"><strong>הערה:</strong> לוודא זמינות DBM / Pasta לפני ניתוח.</div>
       </div>
     </div>
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section G — המשך <span class="footer-dot">●</span> 14–22</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section G — המשך <span class="footer-dot">●</span> 14–22</span>
   </div>
 </div>
 
@@ -2352,12 +2256,12 @@
 <div class="page page-section" id="secH">
   <div class="section-header">
     <div class="section-letter-block">
-      <div class="section-letter-big dark-editable" contenteditable="true">H</div>
+      <div class="section-letter-big">H</div>
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow dark-editable" contenteditable="true">Operational Model — OR Workflow &amp; Logistics</div>
-      <div class="section-title-text" contenteditable="true">מודל תפעולי — OR Workflow</div>
+      <div class="section-eyebrow">Operational Model — OR Workflow & Logistics</div>
+      <div class="section-title-text">מודל תפעולי — OR Workflow</div>
     </div>
   </div>
   <div class="section-body">
@@ -2371,33 +2275,33 @@
     <div class="model-grid" style="margin-bottom:20px;">
       <div class="model-cell core">
         <div class="model-cell-icon">🔷</div>
-        <div class="model-cell-name" contenteditable="true">CORE</div>
-        <div class="model-cell-desc" contenteditable="true">סט כף יד בסיס<br>לרוב הניתוחים</div>
+        <div class="model-cell-name">CORE</div>
+        <div class="model-cell-desc">סט כף יד בסיס<br>לרוב הניתוחים</div>
       </div>
       <div class="model-cell local">
         <div class="model-cell-icon">💉</div>
-        <div class="model-cell-name" contenteditable="true">LOCAL</div>
-        <div class="model-cell-desc" contenteditable="true">סט מקומית<br>WALANT / אשפוז יום</div>
+        <div class="model-cell-name">LOCAL</div>
+        <div class="model-cell-desc">סט מקומית<br>WALANT / אשפוז יום</div>
       </div>
       <div class="model-cell precision">
         <div class="model-cell-icon">🔬</div>
-        <div class="model-cell-name" contenteditable="true">PRECISION</div>
-        <div class="model-cell-desc" contenteditable="true">תוספת ד"ר מאהר<br>ADD-ON בלבד</div>
+        <div class="model-cell-name">PRECISION</div>
+        <div class="model-cell-desc">תוספת ד"ר מאהר<br>ADD-ON בלבד</div>
       </div>
       <div class="model-cell micro">
         <div class="model-cell-icon">🔭</div>
-        <div class="model-cell-name" contenteditable="true">MICRO</div>
-        <div class="model-cell-desc" contenteditable="true">סט מיקרו<br>עצבים / כלי דם</div>
+        <div class="model-cell-name">MICRO</div>
+        <div class="model-cell-desc">סט מיקרו<br>עצבים / כלי דם</div>
       </div>
       <div class="model-cell trauma">
         <div class="model-cell-icon">🦴</div>
-        <div class="model-cell-name" contenteditable="true">TRAUMA</div>
-        <div class="model-cell-desc" contenteditable="true">פלטות / ברגים<br>C-Arm</div>
+        <div class="model-cell-name">TRAUMA</div>
+        <div class="model-cell-desc">פלטות / ברגים<br>C-Arm</div>
       </div>
       <div class="model-cell arthro">
         <div class="model-cell-icon">📡</div>
-        <div class="model-cell-name" contenteditable="true">ARTHROSCOPY</div>
-        <div class="model-cell-desc" contenteditable="true">Tower + Optics<br>Instruments</div>
+        <div class="model-cell-name">ARTHROSCOPY</div>
+        <div class="model-cell-desc">Tower + Optics<br>Instruments</div>
       </div>
     </div>
 
@@ -2410,31 +2314,31 @@
     <div class="workflow-row">
       <div class="workflow-step active">
         <div class="workflow-step-num">01</div>
-        <div class="workflow-step-label" contenteditable="true">בדיקת<br>Preference Card</div>
+        <div class="workflow-step-label">בדיקת<br>Preference Card</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-step-num">02</div>
-        <div class="workflow-step-label" contenteditable="true">הכנת<br>סטים</div>
+        <div class="workflow-step-label">הכנת<br>סטים</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-step-num">03</div>
-        <div class="workflow-step-label" contenteditable="true">הכנת<br>שתלים</div>
+        <div class="workflow-step-label">הכנת<br>שתלים</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-step-num">04</div>
-        <div class="workflow-step-label" contenteditable="true">Checklist<br>ציוד</div>
+        <div class="workflow-step-label">Checklist<br>ציוד</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-step-num">05</div>
-        <div class="workflow-step-label" contenteditable="true">כניסת<br>מטופל</div>
+        <div class="workflow-step-label">כניסת<br>מטופל</div>
       </div>
       <div class="workflow-step">
         <div class="workflow-step-num">06</div>
-        <div class="workflow-step-label" contenteditable="true">Sign-in /<br>Timeout</div>
+        <div class="workflow-step-label">Sign-in /<br>Timeout</div>
       </div>
     </div>
 
-    <div class="info-box teal" style="margin-top:16px;" contenteditable="true">
+    <div class="info-box teal" style="margin-top:16px;">
       <strong>עיקרון תפעולי:</strong> כל ניתוח מתחיל ב-Preference Card — זהו מסמך הסמכות. שינויים בזמן ניתוח מתועדים בדף ניתוח בלבד.
     </div>
 
@@ -2445,11 +2349,11 @@
     </div>
 
     <div class="two-col">
-      <div class="info-box blue" contenteditable="true">
+      <div class="info-box blue">
         <strong>ברגים ושתלים:</strong><br>
         כל ניתוח — תיעוד לוט + מספר ברגים שנוצלו. חזרה למלאי תוך 24 שעות.
       </div>
-      <div class="info-box gold" contenteditable="true">
+      <div class="info-box gold">
         <strong>סטים:</strong><br>
         בדיקת תקינות סטים לפחות אחת לחודש. מחסור בציוד — דיווח מיידי לאחות אחראית.
       </div>
@@ -2457,15 +2361,15 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text" contenteditable="true">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text" contenteditable="true">Section H <span class="footer-dot">●</span> 23</span>
+    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">Section H <span class="footer-dot">●</span> 23</span>
   </div>
 </div>
 
 </div><!-- end pages-container -->
 
 
-<div id="toast" class="">נמחק</div>
+<div id="toast">✓</div>
 
 <div id="edit-toolbar">
   <div class="tb-indicator"></div>
@@ -2627,6 +2531,5 @@ document.addEventListener('keydown', e => {
 });
 </script>
 
-
-
-</body></html>
+</body>
+</html>
