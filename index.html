@@ -1062,6 +1062,15 @@
     table.screw-table { min-width: unset; }
   }
 
+
+  /* Sticky header for Section G */
+  #secG .section-header {
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
 </style>
 </head>
 <body>
@@ -1074,10 +1083,10 @@
   <a class="nav-pill" href="#secC">C — סטים</a>
   <a class="nav-pill" href="#secD">D — ארתרוסקופיה</a>
   <a class="nav-pill" href="#secF">F — ברגים</a>
-  <a class="nav-pill" href="#secG">G — Preference Cards</a>
+  <a class="nav-pill" href="#secG">G — s</a>
   <a class="nav-pill" href="#secH">H — מודל תפעולי</a>
   <span class="nav-spacer"></span>
-  <span class="nav-badge">גרסת עבודה — טיוטה v0.1</span>
+  <span class="nav-badge">גרסה 1.0 — טיוטה v0.1</span>
 </nav>
 
 <div class="pages-container">
@@ -1088,9 +1097,6 @@
   <div class="cover-bg-lines"></div>
   <div class="cover-top-bar"></div>
   <div class="cover-body">
-    <div class="cover-logo-placeholder">
-      LOGO<br>יתווסף
-    </div>
     <div class="cover-tag">Hand Surgery — OR Manual</div>
     <div class="cover-title">חוברת חדר<br>הניתוח</div>
     <div class="cover-subtitle">כירורגיית כף יד ואורתופדיה</div>
@@ -1098,20 +1104,20 @@
     <div class="cover-meta">
       <strong>ד"ר מאהר חטיב</strong><br>
       כירורג כף יד, מרפק ומיקרוכירורגיה<br>
-      <strong>מחלקה:</strong> ______________________<br>
+      <strong>מחלקה:</strong> אורתופדיה א<br>
       <strong>גרסה:</strong> v0.1 — טיוטת עבודה<br>
       <strong>תאריך:</strong> מאי 2026
     </div>
   </div>
-  <div class="cover-version-badge">DRAFT — לפני גרסה סופית</div>
+  <div class="cover-version-badge">גרסה 1.0 — 2026</div>
   <div class="cover-sections-row">
     
     <div class="cover-section-chip">B — ציוד בסיס</div>
     <div class="cover-section-chip">C — סטים</div>
     <div class="cover-section-chip">D — ארתרוסקופיה</div>
     <div class="cover-section-chip">E/F — שתלים</div>
-    <div class="cover-section-chip">G — Preference</div>
-    <div class="cover-section-chip">H — תפעול</div>
+    <div class="cover-section-chip">G — ניתוחים</div>
+    
   </div>
 </div>
 
@@ -1144,7 +1150,7 @@
         <div class="toc-page-num">5</div>
       </div>
       <div class="toc-sub">
-        <div class="toc-sub-item"><div class="toc-dot"></div>סט כף יד בסיס (CORE)</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>סט כף יד בסיס</div>
         <div class="toc-sub-item"><div class="toc-dot"></div>תוספת ד"ר מאהר (ADD-ON)</div>
         <div class="toc-sub-item"><div class="toc-dot"></div>סט מקומית / אקסיזיה</div>
         <div class="toc-sub-item"><div class="toc-dot"></div>סט מיקרוכירורגיה</div>
@@ -1183,23 +1189,20 @@
     <div class="toc-chapter">
       <div class="toc-chapter-header">
         <div class="toc-letter">G</div>
-        <div class="toc-chapter-name">Preference Cards — רשימת ניתוחים</div>
+        <div class="toc-chapter-name">רשימת ניתוחים נפוצים וציוד</div>
         <div class="toc-page-num">13</div>
       </div>
       <div class="toc-sub">
-        <div class="toc-sub-item"><div class="toc-dot"></div>שחרור תעלה קרפלית (CTS)</div>
-        <div class="toc-sub-item"><div class="toc-dot"></div>שחרור אצבע הדק</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>החלפת מפרק CMC1 — משתל מאיה</div>
         <div class="toc-sub-item"><div class="toc-dot"></div>ORIF רדיוס דיסטלי</div>
-        <div class="toc-sub-item"><div class="toc-dot"></div>ORIF + ארתרוסקופיה</div>
-        <div class="toc-sub-item"><div class="toc-dot"></div>4 Corner Fusion</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>ORIF רדיוס דיסטלי + ארתרוסקופיה</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>Four Corner Fusion / Total Wrist Arthroplasty / Total Wrist Fusion</div>
         <div class="toc-sub-item"><div class="toc-dot"></div>תפירת עצב / גיד מכופף / גיד מיישר</div>
-        <div class="toc-sub-item"><div class="toc-dot"></div>קיבוע שבר סקאפויד / חוסר חיבור</div>
+        <div class="toc-sub-item"><div class="toc-dot"></div>קיבוע שבר סקפואיד / חוסר חיבור</div>
       </div>
     </div>
 
-    <div class="toc-chapter">
-      <div class="toc-chapter-header">
-        <div class="toc-letter">H</div>
+    
         <div class="toc-chapter-name">מודל תפעולי — OR Workflow & Logistics</div>
         <div class="toc-page-num">23</div>
       </div>
@@ -1207,8 +1210,8 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text">גרסת עבודה v0.1</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">גרסה 1.0</span>
   </div>
 </div>
 
@@ -1221,14 +1224,14 @@
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow">Basic Equipment — Standard for All Hand Cases</div>
+      <div class="section-eyebrow">Basic Equipment — </div>
       <div class="section-title-text">ציוד בסיס קבוע לכל ניתוחי כף יד</div>
     </div>
   </div>
   <div class="section-body">
 
     <div class="info-box blue">
-      ציוד זה מוכן <strong>בכל ניתוח</strong> ללא יוצא מן הכלל. הוא אינו תלוי בסוג הניתוח ואינו צריך להיות מצוין ב-Preference Card.
+      ציוד זה מוכן <strong>בכל ניתוח</strong> ללא יוצא מן הכלל. הוא אינו תלוי בסוג הניתוח ואינו צריך להיות מצוין .
     </div>
 
     <div class="two-col">
@@ -1239,14 +1242,14 @@
           <div class="section-divider-line"></div>
         </div>
         <div class="checklist-block">
-          <div class="checklist-header"><span class="icon">🔷</span> Sterile Field Essentials</div>
+          <div class="checklist-header"><span class="icon">🔷</span> </div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">כיסוי ארתרוסקופיה + תוספת יסוד גדול</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">עט סימון</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">גרב 15</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">סכין 15</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">Bipolar — Standby בכל ניתוח</div><span class="check-tag w">Standby</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">כיסוי שאבנתית לרחיצת יד</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">כיסוי ארתרוסקופיה + תוספת יסוד גדול</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">עט סימון</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">גרב 15</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">סכין 15</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">Bipolar (ביפולר) — Standby בכל ניתוח</div><span class="check-tag w">Standby</span></div>
+            <div class="check-item mandatory"><div class="check-label">כיסוי שאבנתית לרחיצת יד</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
@@ -1258,14 +1261,14 @@
           <div class="section-divider-line"></div>
         </div>
         <div class="checklist-block">
-          <div class="checklist-header"><span class="icon">🟩</span> Dressing Pack</div>
+          <div class="checklist-header"><span class="icon">🟩</span> ציוד חבישה</div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">גזה ויזלין</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">משחת בקטרובאן / סינטומיצין</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">חבישת קודנום — 3 גדלים</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">פד גזה סטרילי</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">ווילבנד קטן</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">אגד אלסטי קטן / קירליקס</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">גזה ויזלין</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">משחת בקטרובאן / סינטומיצין</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">חבישת קודנום — 3 גדלים</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">פד גזה סטרילי</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">ווילבנד קטן</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">אגד אלסטי קטן / קירליקס</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
@@ -1277,19 +1280,19 @@
       <div class="section-divider-line"></div>
     </div>
     <div class="checklist-block">
-      <div class="checklist-header"><span class="icon">🔬</span> Mini C-Arm — Standby Setup</div>
+      <div class="checklist-header"><span class="icon">🔬</span> Mini C-Arm</div>
       <div class="checklist-body" style="display:grid; grid-template-columns:1fr 1fr; gap:0 20px;">
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">כיסוי ניילון ייעודי</div><span class="check-tag w">Standby</span></div>
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">גרב 20 ס"מ × 2</div><span class="check-tag w">Standby</span></div>
+        <div class="check-item mandatory"><div class="check-label">כיסוי ניילון ייעודי</div><span class="check-tag w">Standby</span></div>
+        <div class="check-item mandatory"><div class="check-label">גרב 20 ס"מ × 2</div><span class="check-tag w">Standby</span></div>
       </div>
     </div>
 
     <div class="info-box warn" style="margin-top:14px;">
-      <strong>⚠ חשוב:</strong> Mini C-Arm מופעל רק בניתוחים המצוינים ב-Preference Card. הכנה מוקדמת — לפני הכנסת המטופל לחדר.
+      <strong>⚠ חשוב:</strong> Mini C-Arm מופעל רק בניתוחים המצוינים . הכנה מוקדמת — לפני הכנסת המטופל לחדר.
     </div>
   </div>
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
     <span class="footer-text">Section B <span class="footer-dot">●</span> 4</span>
   </div>
 </div>
@@ -1311,13 +1314,13 @@
   <div class="section-body">
 
     <div class="info-box blue" style="font-size:11.5px;margin-bottom:18px;">
-      תכולת כלים מלאה עם מק"טים וכמויות — ראה <strong>נספח A</strong> בסוף הקטלוג.
+      
     </div>
 
-    <!-- CORE -->
-    <div style="border:1.5px solid var(--silver);border-radius:10px;overflow:hidden;margin-bottom:14px;">
-      <div style="background:var(--navy);padding:12px 18px;display:flex;align-items:center;gap:12px;">
-        <div style="background:var(--accent);color:white;font-size:9.5px;font-weight:800;padding:3px 10px;border-radius:12px;letter-spacing:0.1em;">CORE</div>
+    <!-- סט בסיס -->
+    <div style="border:1.5px solid #c8d6e8;border-radius:10px;overflow:hidden;margin-bottom:14px;">
+      <div style="background:#1a3a6e;padding:12px 18px;display:flex;align-items:center;gap:12px;">
+        <div style="background:#1e5fa8;color:white;font-size:9.5px;font-weight:700;padding:3px 10px;border-radius:12px;letter-spacing:0.06em;">בסיס</div>
         <div style="font-size:16px;font-weight:800;color:white;flex:1;">סט כף יד בסיס</div>
         <div style="font-size:10px;color:rgba(255,255,255,0.4);">סטים 1–5</div>
       </div>
@@ -1339,26 +1342,26 @@
             </div>
           </div>
           <div>
-            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">שילובים נפוצים</div>
+            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">שילובי סטים</div>
             <div style="font-size:11.5px;color:var(--text);line-height:2.2;">
-              <div>🔷 CORE בלבד — ניתוחי ORIF פשוטים</div>
-              <div>🔷 CORE + תוספת מאהר — שברים עדינים, פלנקס</div>
-              <div>🔷 CORE + ארתרוסקופיה — ORIF + Wrist Scope</div>
+              <div>🔷 סט בסיס בלבד — ניתוחי ORIF פשוטים</div>
+              <div>🔷 סט בסיס + תוספת מאהר — שברים עדינים, פלנקס</div>
+              <div>🔷 סט בסיס + ארתרוסקופיה — ORIF + Wrist Scope</div>
             </div>
           </div>
         </div>
         <div style="background:#fef9c3;border-right:3px solid var(--gold);padding:7px 12px;border-radius:0 4px 4px 0;font-size:11px;margin-top:12px;">
-          <strong>הערה:</strong> קיים ב-5 גרסאות עם הבדלים קלים בכלים — ראה טבלת Diff בנספח A.
+          <strong>הערה:</strong> קיים ב-5 גרסאות עם הבדלים קלים בכלים.
         </div>
       </div>
     </div>
 
-    <!-- LOCAL -->
-    <div style="border:1.5px solid var(--silver);border-radius:10px;overflow:hidden;margin-bottom:14px;">
-      <div style="background:#0e3d36;padding:12px 18px;display:flex;align-items:center;gap:12px;">
-        <div style="background:var(--teal);color:white;font-size:9.5px;font-weight:800;padding:3px 10px;border-radius:12px;letter-spacing:0.1em;">LOCAL</div>
+    <!-- סט מקומית -->
+    <div style="border:1.5px solid #a0d4cc;border-radius:10px;overflow:hidden;margin-bottom:14px;">
+      <div style="background:#0e6b5e;padding:12px 18px;display:flex;align-items:center;gap:12px;">
+        <div style="background:#0e7a6e;color:white;font-size:9.5px;font-weight:700;padding:3px 10px;border-radius:12px;letter-spacing:0.06em;">מקומית</div>
         <div style="font-size:16px;font-weight:800;color:white;flex:1;">סט כף יד מקומית</div>
-        <div style="font-size:10px;color:rgba(255,255,255,0.4);">WALANT & Day Surgery — סטים 1–3</div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.4);">WALANT & Day Surgery — סטים 1–7</div>
       </div>
       <div style="padding:16px 18px;background:white;">
         <div style="background:#f0fdfa;border-right:4px solid var(--teal);padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:14px;font-size:12px;line-height:1.8;">
@@ -1368,20 +1371,21 @@
           <div>
             <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">מתאים ל</div>
             <div style="display:flex;flex-wrap:wrap;gap:5px;">
-              <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">שחרור CTS</span>
+              <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">CTS</span>
               <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">Trigger Finger</span>
               <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">גנגליון</span>
+              <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">Tenolysis</span>
               <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">זיהומים קטנים</span>
               <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">תפירת גיד מיישר</span>
               <span style="background:#ccfbf1;border:1px solid #5eead4;color:#0f766e;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">תפירת גיד מכופף</span>
             </div>
           </div>
           <div>
-            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">שילובים נפוצים</div>
+            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">שילובי סטים</div>
             <div style="font-size:11.5px;color:var(--text);line-height:2.2;">
-              <div>🟢 LOCAL בלבד — CTS, Trigger, גנגליון</div>
-              <div>🟢 LOCAL + תוספת מאהר — תפירת גידים ועצבים</div>
-              <div>🟢 LOCAL + סט מיקרו — תפירת עצב + כלי דם</div>
+              <div>🟢 סט מקומית בלבד — CTS, Trigger, גנגליון</div>
+              <div>🟢 סט מקומית + תוספת מאהר — תפירת גידים ועצבים</div>
+              <div>🟢 סט מקומית + מיקרו — תפירת עצב + כלי דם</div>
             </div>
           </div>
         </div>
@@ -1389,41 +1393,6 @@
     </div>
 
     <!-- ADD-ON DR MAHER -->
-    <div style="border:1.5px solid #fca5a5;border-radius:10px;overflow:hidden;margin-bottom:14px;">
-      <div style="background:#7f1d1d;padding:12px 18px;display:flex;align-items:center;gap:12px;">
-        <div style="background:#dc2626;color:white;font-size:9.5px;font-weight:800;padding:3px 10px;border-radius:12px;letter-spacing:0.1em;">ADD-ON 🔴</div>
-        <div style="font-size:16px;font-weight:800;color:white;flex:1;">תוספת ד"ר מאהר</div>
-        <div style="font-size:10px;color:rgba(255,255,255,0.4);">גרסאות 1, 2, 3 — מסומן אדום</div>
-      </div>
-      <div style="padding:16px 18px;background:white;">
-        <div style="background:#fff1f1;border-right:4px solid #dc2626;padding:10px 14px;border-radius:0 6px 6px 0;margin-bottom:14px;font-size:12px;line-height:1.8;">
-          <strong>ייעוד:</strong> ערכת כלים עדינים ל-<strong>Precision Surgery</strong> — תוספת בלעדית לסט בסיס או מקומית. מיועד לניתוחים הדורשים דיסקציה עדינה, תפירת עצבים, שברי פלנקס עדינים וכירורגיית מיניאטורה.
-          <br><strong style="color:#dc2626;">אינו עומד בפני עצמו — תמיד בשילוב עם סט אחר.</strong>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-          <div>
-            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">מתאים ל</div>
-            <div style="display:flex;flex-wrap:wrap;gap:5px;">
-              <span style="background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">תפירת עצב</span>
-              <span style="background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">שברי פלנקס עדינים</span>
-              <span style="background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">תפירת גידים עדינה</span>
-              <span style="background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">דיסקציה עדינה</span>
-              <span style="background:#fee2e2;border:1px solid #fca5a5;color:#991b1b;font-size:10.5px;padding:3px 9px;border-radius:10px;font-weight:500;">Precision Procedures</span>
-            </div>
-          </div>
-          <div>
-            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">תמיד בשילוב עם</div>
-            <div style="font-size:11.5px;color:var(--text);line-height:2.2;">
-              <div>🔴 + CORE — שברי פלנקס, ORIF עדין</div>
-              <div>🔴 + LOCAL — תפירת עצב, גיד מכופף</div>
-              <div>🔴 + LOCAL + מיקרו — עצבים + כלי דם</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MICRO -->
     <div style="border:1.5px solid var(--silver);border-radius:10px;overflow:hidden;">
       <div style="background:#3d1a0d;padding:12px 18px;display:flex;align-items:center;gap:12px;">
         <div style="background:var(--warn);color:white;font-size:9.5px;font-weight:800;padding:3px 10px;border-radius:12px;letter-spacing:0.1em;">MICRO</div>
@@ -1446,9 +1415,9 @@
             </div>
           </div>
           <div>
-            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">שילובים נפוצים</div>
+            <div style="font-size:10px;font-weight:700;color:var(--text-light);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--silver);">שילובי סטים</div>
             <div style="font-size:11.5px;color:var(--text);line-height:2.2;">
-              <div>🟠 LOCAL + תוספת מאהר + מיקרו</div>
+              <div>🟠 סט מקומית + תוספת מאהר + מיקרו</div>
               <div>🟠 מיקרוסקופ — חובה להזמין מראש</div>
               <div>🟠 חוטים 8-0 / 9-0 / 10-0 — ראה Section E</div>
             </div>
@@ -1459,7 +1428,7 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
     <span class="footer-text">Section C — סטים <span class="footer-dot">●</span> 5</span>
   </div>
 </div>
@@ -1508,22 +1477,22 @@
                 <span style="background:#dbeafe;color:#1e40af;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">XL</span>
               </div>
             </td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
-              <div style="height:18px;"></div>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
+              <div style="font-size:12px;color:var(--text);font-weight:600;">📍 עגלת כף יד</div>
             </td>
           </tr>
           <tr style="background:#f8fafc;">
             <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">חבישת קונדום</td>
             <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">גדלים שונים</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
-              <div style="height:18px;"></div>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
+              <div style="font-size:12px;color:var(--text);font-weight:600;">📍 עגלת כף יד</div>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">Nerve Tube</td>
             <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">גדלים שונים</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
-              <div style="height:18px;"></div>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
+              <div style="font-size:12px;color:var(--text);font-weight:600;">📍 עגלת כף יד</div>
             </td>
           </tr>
           <tr style="background:#f8fafc;">
@@ -1535,15 +1504,15 @@
                 <span style="background:#f3e8ff;color:#6b21a8;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">10-0</span>
               </div>
             </td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
-              <div style="height:18px;"></div>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
+              <div style="font-size:12px;color:var(--text);font-weight:600;">📍 עגלת כף יד</div>
             </td>
           </tr>
           <tr>
             <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">אצבעות סיניות<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Finger Traps</span></td>
             <td style="padding:14px 16px;border:1px solid var(--silver);font-size:11.5px;color:var(--text-mid);">גדלים שונים</td>
-            <td style="padding:14px 16px;border:1px solid var(--silver);border-bottom:1.5px dashed #94a3b8;">
-              <div style="height:18px;"></div>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
+              <div style="font-size:12px;color:var(--text);font-weight:600;">📍 המדפים — ליד קופסאות הארתרוסקופיה</div>
             </td>
           </tr>
           <tr style="background:#f8fafc;">
@@ -1560,6 +1529,19 @@
               <div style="height:18px;"></div>
             </td>
           </tr>
+          <tr>
+            <td style="padding:14px 16px;border:1px solid var(--silver);font-weight:600;font-size:12px;">Allograft עצב<br><span style="font-size:10px;font-weight:400;color:var(--text-light);">Nerve Allograft</span></td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
+              <div style="display:flex;gap:5px;flex-wrap:wrap;">
+                <span style="background:#f3e8ff;color:#6b21a8;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:600;">2–3 מ"מ</span>
+                <span style="background:#e5e7eb;color:#374151;font-size:10px;padding:2px 8px;border-radius:8px;font-weight:500;">1–2 מ"מ — לאישור</span>
+              </div>
+            </td>
+            <td style="padding:14px 16px;border:1px solid var(--silver);">
+              <div style="font-size:12px;color:var(--text);font-weight:600;">📍 בנק הדם — מקרר</div>
+              <div style="font-size:11px;color:var(--text-mid);margin-top:4px;">קופסת קרטון לבנה</div>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -1571,7 +1553,7 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
     <span class="footer-text">Section E — ציוד נלווה</span>
   </div>
 </div>
@@ -1606,10 +1588,10 @@
         <div class="checklist-block">
           <div class="checklist-header" style="background:#0a2a5c;"><span class="icon">📦</span> Tower Setup</div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסה מגדל 1</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסה מגדל 2</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסת כלים ארתרוסקופיה</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">קופסת אופטיקה — שורש כף יד</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">קופסה מגדל 1</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">קופסה מגדל 2</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">קופסת כלים ארתרוסקופיה</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">קופסת אופטיקה — שורש כף יד</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
@@ -1617,11 +1599,11 @@
         <div class="checklist-block">
           <div class="checklist-header" style="background:#0d3d36;"><span class="icon">🔧</span> Consumables / מתכלים</div>
           <div class="checklist-body">
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">Shaver 2.1</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">אצבעות סיניות צבעוניות</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">ספוג כחול סטרילי</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">חגורות שחורות</div><span class="check-tag m">חובה</span></div>
-            <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">סקשן</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">Shaver 2.1</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">אצבעות סיניות צבעוניות</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">ספוג כחול סטרילי</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">חגורות שחורות</div><span class="check-tag m">חובה</span></div>
+            <div class="check-item mandatory"><div class="check-label">סקשן</div><span class="check-tag m">חובה</span></div>
           </div>
         </div>
       </div>
@@ -1636,18 +1618,18 @@
     <div class="checklist-block">
       <div class="checklist-header" style="background:#6b2800;"><span class="icon">✅</span> Pre-Anesthesia Verification</div>
       <div class="checklist-body" style="display:grid; grid-template-columns:1fr 1fr; gap:0 16px;">
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Camera + Light source — חיבור ובדיקה</div><span class="check-tag w">וריפיקציה</span></div>
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Optics — תאימות עם camera confirmed</div><span class="check-tag w">וריפיקציה</span></div>
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Finger traps — זמינות + גדלים</div><span class="check-tag w">חובה</span></div>
-        <div class="check-item warn"><div class="check-box"></div><div class="check-label">Shaver — חיבור למגדל ובדיקת סיבוב</div><span class="check-tag w">חובה</span></div>
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">Inflow / Outflow — חיבור מים</div><span class="check-tag m">חובה</span></div>
-        <div class="check-item mandatory"><div class="check-box"></div><div class="check-label">מיקום מגדל — תוכנן מראש</div><span class="check-tag m">חובה</span></div>
+        <div class="check-item warn"><div class="check-label">Camera + Light source — חיבור ובדיקה</div><span class="check-tag w">וריפיקציה</span></div>
+        <div class="check-item warn"><div class="check-label">Optics — תאימות עם camera confirmed</div><span class="check-tag w">וריפיקציה</span></div>
+        <div class="check-item warn"><div class="check-label">Finger traps — זמינות + גדלים</div><span class="check-tag w">חובה</span></div>
+        <div class="check-item warn"><div class="check-label">Shaver — חיבור למגדל ובדיקת סיבוב</div><span class="check-tag w">חובה</span></div>
+        <div class="check-item mandatory"><div class="check-label">Inflow / Outflow — חיבור מים</div><span class="check-tag m">חובה</span></div>
+        <div class="check-item mandatory"><div class="check-label">מיקום מגדל — תוכנן מראש</div><span class="check-tag m">חובה</span></div>
       </div>
     </div>
 
   </div>
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
     <span class="footer-text">Section D <span class="footer-dot">●</span> 9</span>
   </div>
 </div>
@@ -1667,224 +1649,12 @@
   </div>
   <div class="section-body">
 
-    <!-- HEADLESS COMPRESSION — GENERAL -->
-    <div class="screw-table-wrapper">
-      <div class="screw-brand-header" style="background:#1a2a4a;">
-        <span class="screw-brand-tag" style="background:#2e7dd1;">HEADLESS COMPRESSION</span>
-        מדריך מחלקתי — ברגים Headless כלליים
-      </div>
-      <table class="screw-table">
-        <thead>
-          <tr>
-            <th>קוטר בורג</th>
-            <th>סוגים זמינים</th>
-            <th>K-wire</th>
-            <th>Drill קנולרי</th>
-            <th>אורכים (מ"מ)</th>
-            <th>שימושים שכיחים</th>
-            <th>הערות</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="size-badge">1.7</span></td>
-            <td>Headless</td>
-            <td style="text-align:center;">0.6</td>
-            <td style="text-align:center;">1.7 / ללא קידוח</td>
-            <td style="text-align:center;">8–20</td>
-            <td><span class="use-tag">פלנגות קטנות</span> <span class="use-tag">Avulsion</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;">עדין מאוד</td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">2.2</span></td>
-            <td>Short / Long thread</td>
-            <td style="text-align:center;">0.8</td>
-            <td style="text-align:center;">2.0</td>
-            <td style="text-align:center;">10–40</td>
-            <td><span class="use-tag">סקפואיד קטן</span> <span class="use-tag">DIP/IP fusion</span> <span class="use-tag">מטקרפלים</span></td>
-            <td style="font-size:10.5px;color:#0e8a7a;font-weight:700;">אחד הגדלים הכי שימושיים ביד</td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">3.0</span></td>
-            <td>Short / Long / Fully threaded</td>
-            <td style="text-align:center;">1.1</td>
-            <td style="text-align:center;">2.5</td>
-            <td style="text-align:center;">12–50</td>
-            <td><span class="use-tag">סקפואיד</span> <span class="use-tag">מטקרפלים</span> <span class="use-tag">Radial styloid</span></td>
-            <td style="font-size:10.5px;color:#c9a227;font-weight:700;">⭐ Workhorse</td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">4.0</span></td>
-            <td>Headless / Headed</td>
-            <td style="text-align:center;">1.4</td>
-            <td style="text-align:center;">3.2</td>
-            <td style="text-align:center;">20–60</td>
-            <td><span class="use-tag">STT</span> <span class="use-tag">4CF</span> <span class="use-tag">Arthrodesis</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;">קומפרסיה חזקה</td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">5.0</span></td>
-            <td>Headless / Headed</td>
-            <td style="text-align:center;">1.6–2.0</td>
-            <td style="text-align:center;">4.0</td>
-            <td style="text-align:center;">30–80</td>
-            <td><span class="use-tag">פיוז'נים גדולים</span></td>
-            <td style="font-size:10.5px;color:#6a7a9a;">פחות שימושי ביד רגילה</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- ACUTRAK -->
-    <div class="screw-table-wrapper">
-      <div class="screw-brand-header">
-        <span class="screw-brand-tag">ACUMED</span>
-        ACUTRAK — Headless Compression Screws
-      </div>
-      <table class="screw-table">
-        <thead>
-          <tr>
-            <th>משפחה</th>
-            <th>קוטר (מ"מ)</th>
-            <th>טווח אורכים</th>
-            <th>שימוש עיקרי</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="size-badge">Micro</span></td>
-            <td>2.5–2.8</td>
-            <td>8–30 מ"מ</td>
-            <td><span class="use-tag">פלנגות</span> <span class="use-tag">Proximal pole</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">Mini</span></td>
-            <td>3.5–3.6</td>
-            <td>16–30 מ"מ</td>
-            <td><span class="use-tag">סקפואיד קטן</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">Standard</span></td>
-            <td>4.0–4.1</td>
-            <td>16–34 מ"מ</td>
-            <td><span class="use-tag">סקפואיד Waist</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">4.7</span></td>
-            <td>4.5–4.7</td>
-            <td>20–50 מ"מ</td>
-            <td><span class="use-tag">פיוז'נים</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">5.5</span></td>
-            <td>5.2–5.5</td>
-            <td>25–60 מ"מ</td>
-            <td><span class="use-tag">Salvage</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- STRYKER FIXOS -->
-    <div class="screw-table-wrapper">
-      <div class="screw-brand-header" style="background:#1a3d1a;">
-        <span class="screw-brand-tag" style="background:#2e7d32;">STRYKER</span>
-        FIXOS — Headless Dual Pitch Compression Screws
-      </div>
-      <table class="screw-table">
-        <thead>
-          <tr>
-            <th>מערכת</th>
-            <th>קוטר (מ"מ)</th>
-            <th>טווח אורכים</th>
-            <th>שימוש עיקרי</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="size-badge">Fixos 2.3</span></td>
-            <td>2.3</td>
-            <td>10–26 מ"מ</td>
-            <td><span class="use-tag">פלנגות</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">Fixos 3.0</span></td>
-            <td>3.0</td>
-            <td>12–34 מ"מ</td>
-            <td><span class="use-tag">מטקרפלים</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">Fixos 4.0</span></td>
-            <td>4.0</td>
-            <td>18–40 מ"מ</td>
-            <td><span class="use-tag">סקפואיד</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">Fixos 5.0</span></td>
-            <td>5.0</td>
-            <td>24–60 מ"מ</td>
-            <td><span class="use-tag">פיוז'נים</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- STRYKER VARIAX -->
-    <div class="screw-table-wrapper">
-      <div class="screw-brand-header" style="background:#2d1a3d;">
-        <span class="screw-brand-tag" style="background:#7b2d8b;">STRYKER</span>
-        VariAx / Mini Fragment — Locking & Cortical Screws
-      </div>
-      <table class="screw-table">
-        <thead>
-          <tr>
-            <th>מערכת</th>
-            <th>קוטר (מ"מ)</th>
-            <th>טווח אורכים</th>
-            <th>שימוש עיקרי</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="size-badge">Mini Frag 2.0</span></td>
-            <td>2.0</td>
-            <td>8–38 מ"מ</td>
-            <td><span class="use-tag">פלנגות</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">Mini Frag 2.4</span></td>
-            <td>2.4</td>
-            <td>8–38 מ"מ</td>
-            <td><span class="use-tag">מטקרפלים</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">VariAx Wrist</span></td>
-            <td>2.7</td>
-            <td>8–50 מ"מ</td>
-            <td><span class="use-tag">Distal Radius</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">VariAx PT</span></td>
-            <td>2.7</td>
-            <td>16–26 מ"מ</td>
-            <td><span class="use-tag">Lag screw</span></td>
-          </tr>
-          <tr>
-            <td><span class="size-badge">Compression 3.5</span></td>
-            <td>3.5</td>
-            <td>8–70 מ"מ</td>
-            <td><span class="use-tag">אמה</span> <span class="use-tag">מרפק</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-
     <!-- CCS — CANNULATED CANCELLOUS SCREWS -->
     <div class="screw-table-wrapper">
       <div class="screw-brand-header" style="background:#1a3a5c;">
-        <span class="screw-brand-tag" style="background:#0e8a7a;">CCS</span>
-        Cannulated Cancellous Screws — ברגי CCS מחלקתיים
+        <span class="screw-brand-tag" style="background:#0e8a7a;">MEDARTIS</span>
+        CCS — Cannulated Cancellous Screws
+        <span style="margin-right:auto;font-size:10px;color:rgba(255,255,255,0.5);">חברת צמל &nbsp;|&nbsp; סוכן: דרור</span>
       </div>
       <table class="screw-table">
         <thead>
@@ -1899,6 +1669,24 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td><span class="size-badge">1.5</span></td>
+            <td>Headless / Partial</td>
+            <td style="text-align:center;">0.6</td>
+            <td style="text-align:center;">1.1</td>
+            <td style="text-align:center;">8–20</td>
+            <td><span class="use-tag">פלנגות עדינות</span> <span class="use-tag">Avulsion</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">עדין מאוד — מידארטיס</td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">2.0</span></td>
+            <td>Headless / Partial</td>
+            <td style="text-align:center;">0.8</td>
+            <td style="text-align:center;">1.5</td>
+            <td style="text-align:center;">8–30</td>
+            <td><span class="use-tag">פלנגות קטנות</span> <span class="use-tag">DIP</span></td>
+            <td style="font-size:10.5px;color:#6a7a9a;">מידארטיס</td>
+          </tr>
           <tr>
             <td><span class="size-badge">3.0</span></td>
             <td>Partial / Full</td>
@@ -1944,14 +1732,181 @@
     </div>
 
   </div>
+  
+    <!-- ACUTRAK -->
+    <div class="screw-table-wrapper">
+      <div class="screw-brand-header">
+        <span class="screw-brand-tag">ACUMED — ACUTRAK</span>
+        Headless Compression Screws
+        <span style="margin-right:auto;font-size:10px;color:rgba(255,255,255,0.5);">חברת בפם &nbsp;|&nbsp; סוכן: רומן</span>
+      </div>
+      <table class="screw-table">
+        <thead>
+          <tr>
+            <th>משפחה</th>
+            <th>קוטר (מ"מ)</th>
+            <th>ראש</th>
+            <th>טווח אורכים</th>
+            <th>שימוש עיקרי</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="size-badge">Micro</span></td>
+            <td>2.5–2.8</td>
+            <td>Headless</td>
+            <td>8–30 מ"מ</td>
+            <td><span class="use-tag">פלנגות</span> <span class="use-tag">Proximal pole</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">Mini</span></td>
+            <td>3.5–3.6</td>
+            <td>Headless</td>
+            <td>16–30 מ"מ</td>
+            <td><span class="use-tag">סקפואיד קטן</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">Standard</span></td>
+            <td>4.0–4.1</td>
+            <td>Headless</td>
+            <td>16–34 מ"מ</td>
+            <td><span class="use-tag">סקפואיד Waist</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">4.7</span></td>
+            <td>4.5–4.7</td>
+            <td>Headless</td>
+            <td>20–50 מ"מ</td>
+            <td><span class="use-tag">פיוז'נים</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">5.5</span></td>
+            <td>5.2–5.5</td>
+            <td>Headless</td>
+            <td>25–60 מ"מ</td>
+            <td><span class="use-tag">Salvage</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- STRYKER FIXOS -->
+    <div class="screw-table-wrapper">
+      <div class="screw-brand-header" style="background:#1a3d1a;">
+        <span class="screw-brand-tag" style="background:#2e7d32;">STRYKER</span>
+        FIXOS — Headless Dual Pitch Compression
+      </div>
+      <table class="screw-table">
+        <thead>
+          <tr>
+            <th>מערכת</th>
+            <th>קוטר (מ"מ)</th>
+            <th>ראש</th>
+            <th>טווח אורכים</th>
+            <th>שימוש עיקרי</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="size-badge">Fixos 2.3</span></td>
+            <td>2.3</td>
+            <td>Headless</td>
+            <td>10–26 מ"מ</td>
+            <td><span class="use-tag">פלנגות</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">Fixos 3.0</span></td>
+            <td>3.0</td>
+            <td>Headless</td>
+            <td>12–34 מ"מ</td>
+            <td><span class="use-tag">מטקרפלים</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">Fixos 4.0</span></td>
+            <td>4.0</td>
+            <td>Headless</td>
+            <td>18–40 מ"מ</td>
+            <td><span class="use-tag">סקפואיד</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">Fixos 5.0</span></td>
+            <td>5.0</td>
+            <td>Headless</td>
+            <td>24–60 מ"מ</td>
+            <td><span class="use-tag">פיוז'נים</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- STRYKER VARIAX -->
+    <div class="screw-table-wrapper">
+      <div class="screw-brand-header" style="background:#2d1a3d;">
+        <span class="screw-brand-tag" style="background:#7b2d8b;">STRYKER</span>
+        VariAx / Mini Fragment — Locking & Cortical (עם ראש)
+      </div>
+      <table class="screw-table">
+        <thead>
+          <tr>
+            <th>מערכת</th>
+            <th>קוטר (מ"מ)</th>
+            <th>ראש</th>
+            <th>טווח אורכים</th>
+            <th>שימוש עיקרי</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="size-badge">Mini Frag 2.0</span></td>
+            <td>2.0</td>
+            <td>Headed</td>
+            <td>8–38 מ"מ</td>
+            <td><span class="use-tag">פלנגות</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">Mini Frag 2.4</span></td>
+            <td>2.4</td>
+            <td>Headed</td>
+            <td>8–38 מ"מ</td>
+            <td><span class="use-tag">מטקרפלים</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">VariAx Wrist</span></td>
+            <td>2.7</td>
+            <td>Locking / Headed</td>
+            <td>8–50 מ"מ</td>
+            <td><span class="use-tag">Distal Radius</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">VariAx PT</span></td>
+            <td>2.7</td>
+            <td>Headed</td>
+            <td>16–26 מ"מ</td>
+            <td><span class="use-tag">Lag screw</span></td>
+          </tr>
+          <tr>
+            <td><span class="size-badge">Compression 3.5</span></td>
+            <td>3.5</td>
+            <td>Headed</td>
+            <td>8–70 מ"מ</td>
+            <td><span class="use-tag">אמה</span> <span class="use-tag">מרפק</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box gold" style="font-size:11.5px;">
+      <strong>⭐ כלל אצבע:</strong> בורג 3.0 הוא ה-Workhorse של כף היד. בורג 2.2 לעבודה עדינה על פלנגות ו-DIP. בורג 4.0 לפיוז'נים עם קומפרסיה.
+    </div>
+
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
     <span class="footer-text">Section F — ברגים</span>
   </div>
 </div>
 
 <!-- ===== SECTION G — PREFERENCE CARDS ===== -->
-<div class="page-label">Section G — Preference Cards</div>
+<div class="page-label">Section G — s</div>
 <div class="page page-section" id="secG">
   <div class="section-header">
     <div class="section-letter-block">
@@ -1959,8 +1914,7 @@
       <div class="section-letter-sub">Section</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow">Surgical Preference Cards — Per Procedure</div>
-      <div class="section-title-text">כרטיסי Preference — רשימת ניתוחים</div>
+      <div class="section-title-text">רשימת ניתוחים נפוצים וציוד</div>
     </div>
   </div>
   <div class="section-body">
@@ -1968,66 +1922,43 @@
     <!-- CTS -->
     <div class="pref-card">
       <div class="pref-card-header">
-        <div class="pref-card-icon">✂</div>
-        <div class="pref-card-title">שחרור תעלה קרפלית — CTS Release</div>
-        <div class="pref-card-code">G-01</div>
+        <div class="pref-card-icon">🦴</div>
+        <div class="pref-card-title">החלפת מפרק CMC1 — משתל מאיה</div>
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
             <div class="pref-col-label">ציוד חובה</div>
-            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית / אקסיזיה</div>
-            <div class="pref-item"><div class="pref-bullet"></div>רטרקטור אוטומטי קטן</div>
-            <div class="pref-item"><div class="pref-bullet"></div>Metzenbaum ארוך</div>
+            <div class="pref-item"><div class="pref-bullet"></div>סט כף יד בסיס</div>
+            <div class="pref-item"><div class="pref-bullet"></div>משתל מאיה — חברת CPM</div>
+            <div class="pref-item"><div class="pref-bullet"></div>מסורית רוחב 1 ס"מ</div>
+            <div class="pref-item"><div class="pref-bullet"></div>Mini C-Arm</div>
           </div>
           <div>
-            <div class="pref-col-label">אופציונלי / Standby</div>
-            <div class="pref-item"><div class="pref-bullet opt"></div>Bipolar — Standby</div>
-            <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm — לא שגרתי</div>
+            <div class="pref-col-label">הערות</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>לוודא זמינות משתל מאיה לפני ניתוח</div>
+            <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm — חובה בניתוח זה</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- TRIGGER FINGER -->
-    <div class="pref-card">
-      <div class="pref-card-header">
-        <div class="pref-card-icon">🤜</div>
-        <div class="pref-card-title">שחרור אצבע הדק — Trigger Finger Release</div>
-        <div class="pref-card-code">G-02</div>
-      </div>
-      <div class="pref-card-body">
-        <div class="pref-card-grid">
-          <div>
-            <div class="pref-col-label">ציוד חובה</div>
-            <div class="pref-item"><div class="pref-bullet"></div>סט מקומית / אקסיזיה</div>
-            <div class="pref-item"><div class="pref-bullet"></div>ווי Senn</div>
-            <div class="pref-item"><div class="pref-bullet"></div>ווי Damar</div>
-          </div>
-          <div>
-            <div class="pref-col-label">אופציונלי</div>
-            <div class="pref-item"><div class="pref-bullet opt"></div>WALANT — ללא טורניקט</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ORIF DISTAL RADIUS -->
+<!-- ORIF DISTAL RADIUS -->
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">🦴</div>
         <div class="pref-card-title">ORIF רדיוס דיסטלי</div>
-        <div class="pref-card-code">G-03</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
             <div class="pref-col-label">ציוד חובה</div>
             <div class="pref-item"><div class="pref-bullet"></div>סט בסיס</div>
-            <div class="pref-item"><div class="pref-bullet"></div>פלטות וברגים — Acu-Loc 2 / VariAx</div>
+            
             <div class="pref-item"><div class="pref-bullet"></div>מקדחים + Cutter</div>
-            <div class="pref-item"><div class="pref-bullet"></div>Langenvac</div>
-            <div class="pref-item"><div class="pref-bullet"></div>רטרקטור אוטומטי</div>
+            
+            
           </div>
           <div>
             <div class="pref-col-label">אופציונלי / Standby</div>
@@ -2045,13 +1976,13 @@
       <div class="pref-card-header">
         <div class="pref-card-icon">🔭</div>
         <div class="pref-card-title">ORIF רדיוס דיסטלי + ארתרוסקופיה</div>
-        <div class="pref-card-code">G-04</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
             <div class="pref-col-label">ציוד חובה — ORIF</div>
-            <div class="pref-item"><div class="pref-bullet"></div>כל ציוד G-03</div>
+            <div class="pref-item"><div class="pref-bullet"></div>כל הציוד ל-ORIF רדיוס דיסטלי</div>
           </div>
           <div>
             <div class="pref-col-label">ציוד חובה — ארתרוסקופיה</div>
@@ -2070,8 +2001,8 @@
     <div class="pref-card">
       <div class="pref-card-header">
         <div class="pref-card-icon">⬛</div>
-        <div class="pref-card-title">4 Corner Fusion</div>
-        <div class="pref-card-code">G-05</div>
+        <div class="pref-card-title">Four Corner Fusion / Total Wrist Arthroplasty / Total Wrist Fusion</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
@@ -2096,13 +2027,13 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
     <span class="footer-text">Section G <span class="footer-dot">●</span> 13–22</span>
   </div>
 </div>
 
 <!-- ===== SECTION G continued — Nerve/Tendon/Scaphoid ===== -->
-<div class="page-label">Section G — המשך Preference Cards</div>
+<div class="page-label">Section G — המשך s</div>
 <div class="page page-section">
   <div class="section-header">
     <div class="section-letter-block">
@@ -2110,7 +2041,6 @@
       <div class="section-letter-sub">המשך</div>
     </div>
     <div class="section-title-block">
-      <div class="section-eyebrow">Preference Cards — Nerve, Tendon & Scaphoid</div>
       <div class="section-title-text">תפירות ושברים</div>
     </div>
   </div>
@@ -2121,7 +2051,7 @@
       <div class="pref-card-header">
         <div class="pref-card-icon">🔬</div>
         <div class="pref-card-title">תפירת עצב — Nerve Repair</div>
-        <div class="pref-card-code">G-06</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
@@ -2149,7 +2079,7 @@
       <div class="pref-card-header">
         <div class="pref-card-icon">🤚</div>
         <div class="pref-card-title">תפירת גיד מכופף — Flexor Tendon Repair</div>
-        <div class="pref-card-code">G-07</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
@@ -2175,7 +2105,7 @@
       <div class="pref-card-header">
         <div class="pref-card-icon">☝</div>
         <div class="pref-card-title">תפירת גיד מיישר — Extensor Tendon Repair</div>
-        <div class="pref-card-code">G-08</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
@@ -2199,14 +2129,14 @@
       <div class="pref-card-header">
         <div class="pref-card-icon">🩻</div>
         <div class="pref-card-title">קיבוע שבר סקאפויד — Scaphoid ORIF</div>
-        <div class="pref-card-code">G-09</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
             <div class="pref-col-label">ציוד חובה</div>
             <div class="pref-item"><div class="pref-bullet"></div>סט מקומית</div>
-            <div class="pref-item"><div class="pref-bullet"></div>סט ברגים חלולים — Acutrak Mini/Standard</div>
+            <div class="pref-item"><div class="pref-bullet"></div>בורג קנולרי — קוטר 2 מ"מ או 3 מ"מ</div>
           </div>
           <div>
             <div class="pref-col-label">אופציונלי</div>
@@ -2222,14 +2152,14 @@
       <div class="pref-card-header">
         <div class="pref-card-icon">🦷</div>
         <div class="pref-card-title">חוסר חיבור סקאפויד — Scaphoid Non-Union</div>
-        <div class="pref-card-code">G-10</div>
+        
       </div>
       <div class="pref-card-body">
         <div class="pref-card-grid">
           <div>
             <div class="pref-col-label">ציוד חובה</div>
             <div class="pref-item"><div class="pref-bullet"></div>סט בסיס</div>
-            <div class="pref-item"><div class="pref-bullet"></div>ברגים חלולים — Acutrak</div>
+            <div class="pref-item"><div class="pref-bullet"></div>בורג קנולרי — קוטר 2 מ"מ או 3 מ"מ</div>
             <div class="pref-item"><div class="pref-bullet"></div>תוספת ד"ר מאהר</div>
             <div class="pref-item"><div class="pref-bullet"></div>DBM / Pasta bone graft</div>
             <div class="pref-item"><div class="pref-bullet"></div>מסורית</div>
@@ -2237,7 +2167,7 @@
           <div>
             <div class="pref-col-label">אופציונלי</div>
             <div class="pref-item"><div class="pref-bullet opt"></div>Mini C-Arm</div>
-            <div class="pref-item"><div class="pref-bullet opt"></div>Volar wedge graft</div>
+            
           </div>
         </div>
         <div class="pref-note"><strong>הערה:</strong> לוודא זמינות DBM / Pasta לפני ניתוח.</div>
@@ -2246,124 +2176,12 @@
 
   </div>
   <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
+    <span class="footer-text">אורתופדיה א <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
     <span class="footer-text">Section G — המשך <span class="footer-dot">●</span> 14–22</span>
   </div>
 </div>
 
 <!-- ===== SECTION H — OPERATIONAL MODEL ===== -->
-<div class="page-label">Section H — מודל תפעולי</div>
-<div class="page page-section" id="secH">
-  <div class="section-header">
-    <div class="section-letter-block">
-      <div class="section-letter-big">H</div>
-      <div class="section-letter-sub">Section</div>
-    </div>
-    <div class="section-title-block">
-      <div class="section-eyebrow">Operational Model — OR Workflow & Logistics</div>
-      <div class="section-title-text">מודל תפעולי — OR Workflow</div>
-    </div>
-  </div>
-  <div class="section-body">
-
-    <div class="section-divider">
-      <div class="section-divider-line"></div>
-      <div class="section-divider-label">מודול הסטים — Set Matrix</div>
-      <div class="section-divider-line"></div>
-    </div>
-
-    <div class="model-grid" style="margin-bottom:20px;">
-      <div class="model-cell core">
-        <div class="model-cell-icon">🔷</div>
-        <div class="model-cell-name">CORE</div>
-        <div class="model-cell-desc">סט כף יד בסיס<br>לרוב הניתוחים</div>
-      </div>
-      <div class="model-cell local">
-        <div class="model-cell-icon">💉</div>
-        <div class="model-cell-name">LOCAL</div>
-        <div class="model-cell-desc">סט מקומית<br>WALANT / אשפוז יום</div>
-      </div>
-      <div class="model-cell precision">
-        <div class="model-cell-icon">🔬</div>
-        <div class="model-cell-name">PRECISION</div>
-        <div class="model-cell-desc">תוספת ד"ר מאהר<br>ADD-ON בלבד</div>
-      </div>
-      <div class="model-cell micro">
-        <div class="model-cell-icon">🔭</div>
-        <div class="model-cell-name">MICRO</div>
-        <div class="model-cell-desc">סט מיקרו<br>עצבים / כלי דם</div>
-      </div>
-      <div class="model-cell trauma">
-        <div class="model-cell-icon">🦴</div>
-        <div class="model-cell-name">TRAUMA</div>
-        <div class="model-cell-desc">פלטות / ברגים<br>C-Arm</div>
-      </div>
-      <div class="model-cell arthro">
-        <div class="model-cell-icon">📡</div>
-        <div class="model-cell-name">ARTHROSCOPY</div>
-        <div class="model-cell-desc">Tower + Optics<br>Instruments</div>
-      </div>
-    </div>
-
-    <div class="section-divider">
-      <div class="section-divider-line"></div>
-      <div class="section-divider-label">OR Workflow — סדר תפעולי</div>
-      <div class="section-divider-line"></div>
-    </div>
-
-    <div class="workflow-row">
-      <div class="workflow-step active">
-        <div class="workflow-step-num">01</div>
-        <div class="workflow-step-label">בדיקת<br>Preference Card</div>
-      </div>
-      <div class="workflow-step">
-        <div class="workflow-step-num">02</div>
-        <div class="workflow-step-label">הכנת<br>סטים</div>
-      </div>
-      <div class="workflow-step">
-        <div class="workflow-step-num">03</div>
-        <div class="workflow-step-label">הכנת<br>שתלים</div>
-      </div>
-      <div class="workflow-step">
-        <div class="workflow-step-num">04</div>
-        <div class="workflow-step-label">Checklist<br>ציוד</div>
-      </div>
-      <div class="workflow-step">
-        <div class="workflow-step-num">05</div>
-        <div class="workflow-step-label">כניסת<br>מטופל</div>
-      </div>
-      <div class="workflow-step">
-        <div class="workflow-step-num">06</div>
-        <div class="workflow-step-label">Sign-in /<br>Timeout</div>
-      </div>
-    </div>
-
-    <div class="info-box teal" style="margin-top:16px;">
-      <strong>עיקרון תפעולי:</strong> כל ניתוח מתחיל ב-Preference Card — זהו מסמך הסמכות. שינויים בזמן ניתוח מתועדים בדף ניתוח בלבד.
-    </div>
-
-    <div class="section-divider">
-      <div class="section-divider-line"></div>
-      <div class="section-divider-label">Inventory Control — עקרונות</div>
-      <div class="section-divider-line"></div>
-    </div>
-
-    <div class="two-col">
-      <div class="info-box blue">
-        <strong>ברגים ושתלים:</strong><br>
-        כל ניתוח — תיעוד לוט + מספר ברגים שנוצלו. חזרה למלאי תוך 24 שעות.
-      </div>
-      <div class="info-box gold">
-        <strong>סטים:</strong><br>
-        בדיקת תקינות סטים לפחות אחת לחודש. מחסור בציוד — דיווח מיידי לאחות אחראית.
-      </div>
-    </div>
-
-  </div>
-  <div class="page-footer">
-    <span class="footer-text">Hand Surgery OR Manual <span class="footer-dot">●</span> ד"ר מאהר חטיב</span>
-    <span class="footer-text">Section H <span class="footer-dot">●</span> 23</span>
-  </div>
 </div>
 
 </div><!-- end pages-container -->
@@ -2467,7 +2285,7 @@ function addCheckItem() {
   if (!target) return;
   const item = document.createElement('div');
   item.className = 'check-item mandatory';
-  item.innerHTML = '<div class="check-box"></div><div class="check-label" contenteditable="true">פריט חדש...</div><span class="check-tag m">חובה</span>';
+  item.innerHTML = '<div class="check-label" contenteditable="true">פריט חדש...</div><span class="check-tag m">חובה</span>';
   addRowBtns(item, 'check');
   target.appendChild(item);
   setTimeout(() => { const l = item.querySelector('[contenteditable]'); if(l){l.focus();selectAll(l);} }, 50);
